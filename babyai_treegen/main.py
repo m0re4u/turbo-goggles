@@ -1,6 +1,6 @@
 import nltk
-
-from nltk.parse import generate
+from graphviz import Digraph
+import generate
 
 def main():
     grammar = nltk.CFG.fromstring("""
@@ -20,9 +20,23 @@ def main():
     # print(grammar.productions())
 
     gen = generate.generate(grammar)
-    # print(len(list(gen)))
-    for i, sent in enumerate(gen):
+    G = Digraph(comment='single tree')
+    for i, sent in enumerate(gen, 1):
         print(f"{i:>3} - {sent}")
+
+        print(sent[0])
+        a = expand(sent[0], G)
+        exit()
+
+def expand(items, g):
+    print(items)
+    l, *r = items
+    g.node(str(l), str(l))
+    for el in r:
+        print(f"el: {el}")
+        expand(el, g)
+        # g.node(str(l), str(l))
+        # g.edge(str(l), str)
 
 
 if __name__ == "__main__":
