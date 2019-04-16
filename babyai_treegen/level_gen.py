@@ -9,7 +9,7 @@ from segment import Segmenter
 def main(args):
     env = gym.make(args.env)
     c = Counter()
-    segger = Segmenter(args.segment_level)
+    segger = Segmenter(args.env, args.segment_level)
 
     for _ in range(args.n_missions):
         obs = env.reset()

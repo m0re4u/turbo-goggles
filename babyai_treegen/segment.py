@@ -49,21 +49,30 @@ class Segment():
         return format(str(self), fmt)
 
 class Segmenter():
-    def __init__(self, segment_level):
-        self.level = segment_level
+    def __init__(self, mission, segment_level):
+        self.segment_level = segment_level
+        self.mission = mission
 
     def segment(self, instruction):
         instruction_list = instruction.split()
-        if self.level == 'word':
+        if self.segment_level == 'word':
             return [Segment(x, words_to_wordtype[x]) for x in instruction_list]
-        elif self.level == 'segment':
-            # Mission specific segmentation? (hardcore??)
-            # This one is for PutNextLocal-v0
-            cmd = instruction_list[:1]
-            obj1 = instruction_list[1:4]
-            locobj = instruction_list[4:]
-            return [
-                Segment(cmd, SegmentType.COMMAND),
-                Segment(obj1, SegmentType.OBJECT),
-                Segment(locobj, SegmentType.PUTOBJECT)
-            ]
+        elif self.segment_level == 'segment':
+            if self.mission == "BabyAI-PutNextLocal-v0":
+                # Mission specific segmentation? (hardcore??)
+                # This one is for PutNextLocal-v0
+                cmd = instruction_list[:1]
+                obj1 = instruction_list[1:4]
+                locobj = instruction_list[4:]
+                return [
+                    Segment(cmd, SegmentType.COMMAND),
+                    Segment(obj1, SegmentType.OBJECT),
+                    Segment(locobj, SegmentType.PUTOBJECT)
+                ]
+            elif self.mission == "BabyAI-GoToLocal-v0" or "BabyAI-PickupLoc-v0":
+                cmd = instruction_list[:2]
+                obj1 = instruction_list[2:]
+                return [
+                    Segment(cmd, SegmentType.COMMAND),
+                    Segment(obj1, SegmentType.OBJECT)
+                ]
