@@ -1,4 +1,6 @@
 from enum import Enum
+
+
 class SegmentType(Enum):
     COMMAND = 1
     OBJECT = 2
@@ -7,6 +9,7 @@ class SegmentType(Enum):
     NOUN = 5
     PROP = 6
     ARTICLE = 7
+
 
 words_to_wordtype = {
     'put': SegmentType.VERB,
@@ -29,13 +32,16 @@ words_to_wordtype = {
     'the': SegmentType.ARTICLE
 }
 
+
 class Segment():
     def __init__(self, words, type):
         self.words = words
         self.type = type
 
     def __repr__(self):
-        return f"{self.type:22} - {self.words}"
+        l = [word + "_" + str(hash(word)) for word in self.words]
+        sent = " ".join(l)
+        return sent
 
     def __hash__(self):
         return hash(str(self.words))
@@ -48,10 +54,12 @@ class Segment():
     def __format__(self, fmt):
         return format(str(self), fmt)
 
+
 class Segmenter():
-    def __init__(self, mission, segment_level):
+    def __init__(self, mission, segment_level, vocabulary):
         self.segment_level = segment_level
         self.mission = mission
+        self.vocabulary = vocabulary
 
     def segment(self, instruction):
         instruction_list = instruction.split()
@@ -59,8 +67,6 @@ class Segmenter():
             return [Segment(x, words_to_wordtype[x]) for x in instruction_list]
         elif self.segment_level == 'segment':
             if self.mission == "BabyAI-PutNextLocal-v0":
-                # Mission specific segmentation? (hardcore??)
-                # This one is for PutNextLocal-v0
                 cmd = instruction_list[:1]
                 obj1 = instruction_list[1:4]
                 locobj = instruction_list[4:]
@@ -69,7 +75,9 @@ class Segmenter():
                     Segment(obj1, SegmentType.OBJECT),
                     Segment(locobj, SegmentType.PUTOBJECT)
                 ]
-            elif self.mission == "BabyAI-GoToLocal-v0" or "BabyAI-PickupLoc-v0":
+            elif (self.mission == "BabyAI-GoToLocal-v0" or
+                  self.mission == "BabyAI-PickupLoc-v0" or
+                  self.mission == "BabyAI-GoTo-v0"):
                 cmd = instruction_list[:2]
                 obj1 = instruction_list[2:]
                 return [

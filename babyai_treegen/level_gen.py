@@ -2,14 +2,14 @@ import argparse
 from collections import Counter
 import gym
 
-import babyai
-
+from babyai.utils.format import Vocabulary
 from segment import Segmenter
 
 def main(args):
     env = gym.make(args.env)
     c = Counter()
-    segger = Segmenter(args.env, args.segment_level)
+    vocab = Vocabulary(args.vocab)
+    segger = Segmenter(args.env, args.segment_level, vocab)
 
     for _ in range(args.n_missions):
         obs = env.reset()
@@ -32,5 +32,7 @@ if __name__ == "__main__":
                         help="segment on word or clause level")
     parser.add_argument("--n_missions", type=int, default=100,
                         help="how many missions to sample")
+    parser.add_argument("--vocab", type=str, default="vocab.json",
+                        help="vocabulary (mapping from words to idx)")
     args = parser.parse_args()
     main(args)
