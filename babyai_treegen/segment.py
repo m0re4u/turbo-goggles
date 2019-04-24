@@ -34,12 +34,16 @@ words_to_wordtype = {
 
 
 class Segment():
-    def __init__(self, words, type):
+    def __init__(self, words, type, append_segid=False):
         self.words = words
         self.type = type
+        self.segid = append_segid
 
     def __repr__(self):
-        l = [word + "_" + str(hash(word)) for word in self.words]
+        if self.segid:
+            l = [word + "_" + str(hash(self)) for word in self.words]
+        else:
+            l = self.words
         sent = " ".join(l)
         return sent
 
@@ -56,10 +60,9 @@ class Segment():
 
 
 class Segmenter():
-    def __init__(self, mission, segment_level, vocabulary):
+    def __init__(self, mission, segment_level):
         self.segment_level = segment_level
         self.mission = mission
-        self.vocabulary = vocabulary
 
     def segment(self, instruction):
         instruction_list = instruction.split()

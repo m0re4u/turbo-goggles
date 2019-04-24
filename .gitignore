@@ -107,3 +107,4 @@ venv.bak/
 .gv
 test-output/
 babyai_treegen/vocab.json
+.log
