@@ -8,7 +8,7 @@ from segment import Segmenter
 
 def main(args):
     c = Counter()
-    for lvl in args.env:
+    for lvl in tqdm(args.env):
         segment_level(c, lvl)
 
     print(f"{len(c)} unique segments")
