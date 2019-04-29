@@ -60,23 +60,24 @@ class Segment():
 
 
 class Segmenter():
-    def __init__(self, mission, segment_level):
+    def __init__(self, mission, segment_level, append_segid=False):
         self.segment_level = segment_level
         self.mission = mission
+        self.append_segid = append_segid
 
     def segment(self, instruction):
         instruction_list = instruction.split()
         if self.segment_level == 'word':
-            return [Segment(x, words_to_wordtype[x]) for x in instruction_list]
+            return [Segment(x, words_to_wordtype[x], self.append_segid) for x in instruction_list]
         elif self.segment_level == 'segment':
             if self.mission == "BabyAI-PutNextLocal-v0":
                 cmd = instruction_list[:1]
                 obj1 = instruction_list[1:4]
                 locobj = instruction_list[4:]
                 return [
-                    Segment(cmd, SegmentType.COMMAND),
-                    Segment(obj1, SegmentType.OBJECT),
-                    Segment(locobj, SegmentType.PUTOBJECT)
+                    Segment(cmd, SegmentType.COMMAND,self.append_segid),
+                    Segment(obj1, SegmentType.OBJECT,self.append_segid),
+                    Segment(locobj, SegmentType.PUTOBJECT,self.append_segid)
                 ]
             elif (self.mission == "BabyAI-GoToLocal-v0" or
                   self.mission == "BabyAI-PickupLoc-v0" or
@@ -84,6 +85,6 @@ class Segmenter():
                 cmd = instruction_list[:2]
                 obj1 = instruction_list[2:]
                 return [
-                    Segment(cmd, SegmentType.COMMAND),
-                    Segment(obj1, SegmentType.OBJECT)
+                    Segment(cmd, SegmentType.COMMAND,self.append_segid),
+                    Segment(obj1, SegmentType.OBJECT,self.append_segid)
                 ]
