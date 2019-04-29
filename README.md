@@ -24,3 +24,8 @@ Required packages:
 - numpy
 - matplotlib
 - scipy
+
+
+## Utils
+Some extra utilities:
+- `replace_infile.sh` loops over (SLURM output) files and tries to replace some text inside each file.
