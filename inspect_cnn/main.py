@@ -8,7 +8,8 @@ def main(args):
     state = torch.load(args.model, map_location=torch.device('cpu'))
     model = SkillEmbedding(*state['model_params'])
     print(state['model_params'])
-
+    for k,v in state['model'].items():
+        print(f"{k:>40} : {v.size()}")
 
 
 if __name__ == "__main__":
