@@ -6,6 +6,7 @@ from tqdm import tqdm
 from babyai.utils.format import Vocabulary
 from segment import Segmenter
 
+
 def main(args):
     c = Counter()
     for lvl in tqdm(args.env, disable=args.disable_bar):
@@ -26,7 +27,6 @@ def segment_level(counter, level_name, args):
         segs = segger.segment(sent)
         print(" ".join([str(x) for x in segs]))
         counter.update(segs)
-
 
 
 if __name__ == "__main__":

@@ -33,6 +33,22 @@ words_to_wordtype = {
 }
 
 
+class SegmentHash():
+    def __init__(self):
+        self.max_size = 100
+        self.vocab = {}
+
+    def __getitem__(self, key):
+        if not (key in self.vocab.keys()):
+            if len(self.vocab) >= self.max_size:
+                raise ValueError("Maximum vocabulary capacity reached")
+            self.vocab[key] = len(self.vocab) + 1
+        return self.vocab[key]
+
+
+hasher = SegmentHash()
+
+
 class Segment():
     def __init__(self, words, type, append_segid=False):
         self.words = words
@@ -41,7 +57,7 @@ class Segment():
 
     def __repr__(self):
         if self.segid:
-            l = [word + "_" + str(hash(self)) for word in self.words]
+            l = [word + "_" + str(hasher[self]) for word in self.words]
         else:
             l = self.words
         sent = " ".join(l)
@@ -70,14 +86,15 @@ class Segmenter():
         if self.segment_level == 'word':
             return [Segment(x, words_to_wordtype[x], self.append_segid) for x in instruction_list]
         elif self.segment_level == 'segment':
+            # Rule based segmentation based on level
             if self.mission == "BabyAI-PutNextLocal-v0":
                 cmd = instruction_list[:1]
                 obj1 = instruction_list[1:4]
                 locobj = instruction_list[4:]
                 return [
-                    Segment(cmd, SegmentType.COMMAND,self.append_segid),
-                    Segment(obj1, SegmentType.OBJECT,self.append_segid),
-                    Segment(locobj, SegmentType.PUTOBJECT,self.append_segid)
+                    Segment(cmd, SegmentType.COMMAND, self.append_segid),
+                    Segment(obj1, SegmentType.OBJECT, self.append_segid),
+                    Segment(locobj, SegmentType.PUTOBJECT, self.append_segid)
                 ]
             elif (self.mission == "BabyAI-GoToLocal-v0" or
                   self.mission == "BabyAI-PickupLoc-v0" or
@@ -85,6 +102,6 @@ class Segmenter():
                 cmd = instruction_list[:2]
                 obj1 = instruction_list[2:]
                 return [
-                    Segment(cmd, SegmentType.COMMAND,self.append_segid),
-                    Segment(obj1, SegmentType.OBJECT,self.append_segid)
+                    Segment(cmd, SegmentType.COMMAND, self.append_segid),
+                    Segment(obj1, SegmentType.OBJECT, self.append_segid)
                 ]
