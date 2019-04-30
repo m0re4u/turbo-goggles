@@ -5,10 +5,11 @@ class SegmentType(Enum):
     COMMAND = 1
     OBJECT = 2
     PUTOBJECT = 3
-    VERB = 4
-    NOUN = 5
-    PROP = 6
-    ARTICLE = 7
+    LOCSPEC = 4
+    VERB = 5
+    NOUN = 6
+    PROP = 7
+    ARTICLE = 8
 
 
 words_to_wordtype = {
@@ -32,10 +33,19 @@ words_to_wordtype = {
     'the': SegmentType.ARTICLE
 }
 
+colors = set([
+    'red',
+    'green',
+    'blue',
+    'purple',
+    'yellow',
+    'grey'
+])
+
 
 class SegmentHash():
     def __init__(self):
-        self.max_size = 100
+        self.max_size = 1000
         self.vocab = {}
 
     def __getitem__(self, key):
@@ -90,14 +100,15 @@ class Segmenter():
             if self.mission == "BabyAI-PutNextLocal-v0":
                 cmd = instruction_list[:1]
                 obj1 = instruction_list[1:4]
-                locobj = instruction_list[4:]
+                locobj = instruction_list[4:6]
+                obj2 = instruction_list[6:]
                 return [
                     Segment(cmd, SegmentType.COMMAND, self.append_segid),
                     Segment(obj1, SegmentType.OBJECT, self.append_segid),
-                    Segment(locobj, SegmentType.PUTOBJECT, self.append_segid)
+                    Segment(locobj, SegmentType.PUTOBJECT, self.append_segid),
+                    Segment(obj2, SegmentType.OBJECT, self.append_segid)
                 ]
             elif (self.mission == "BabyAI-GoToLocal-v0" or
-                  self.mission == "BabyAI-PickupLoc-v0" or
                   self.mission == "BabyAI-GoTo-v0"):
                 cmd = instruction_list[:2]
                 obj1 = instruction_list[2:]
@@ -105,3 +116,27 @@ class Segmenter():
                     Segment(cmd, SegmentType.COMMAND, self.append_segid),
                     Segment(obj1, SegmentType.OBJECT, self.append_segid)
                 ]
+            elif self.mission == "BabyAI-PickupLoc-v0":
+                if len(colors & set(instruction_list)):
+                    # colored object
+                    obj_e = 5
+                else:
+                    # no color specifier for object
+                    obj_e = 4
+                cmd = instruction_list[:2]
+                obj1 = instruction_list[2:obj_e]
+                loc = instruction_list[obj_e:]
+                if loc != []:
+                    return [
+                        Segment(cmd, SegmentType.COMMAND, self.append_segid),
+                        Segment(obj1, SegmentType.OBJECT, self.append_segid),
+                        Segment(loc, SegmentType.LOCSPEC, self.append_segid)
+                    ]
+                else:
+                    return [
+                        Segment(cmd, SegmentType.COMMAND, self.append_segid),
+                        Segment(obj1, SegmentType.OBJECT, self.append_segid)
+                    ]
+
+
+

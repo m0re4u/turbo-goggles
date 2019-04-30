@@ -12,9 +12,9 @@ def main(args):
     for lvl in tqdm(args.env, disable=args.disable_bar):
         segment_level(c, lvl, args)
 
-    print(f"{len(c)} unique segments")
-    for k, v in c.most_common(len(c)):
-        print(f"{k:80} : {v/(args.n_missions * len(args.env))}")
+#     print(f"{len(c)} unique segments")
+#     for k, v in c.most_common(len(c)):
+#         print(f"{k:80} : {v/(args.n_missions * len(args.env)):1.4f}")
 
 
 def segment_level(counter, level_name, args):
