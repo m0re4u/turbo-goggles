@@ -1,3 +1,4 @@
+![logo](goggles.png)
 # turbo-goggles
 Utility repo for my master thesis at the University of Amsterdam.
 Rest of my implementation is found in [machine](https://github.com/m0re4u/machine).
