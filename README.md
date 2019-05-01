@@ -1,5 +1,6 @@
 # turbo-goggles
-Utility repo for my master thesis at the University of Amsterdam
+Utility repo for my master thesis at the University of Amsterdam.
+Rest of my implementation is found in [machine](https://github.com/m0re4u/machine).
 
 ## BabyAI treegen
 Segmenter to analyze the Baby language from [BabyAI](https://arxiv.org/abs/1810.08272).
@@ -24,6 +25,10 @@ Required packages:
 - numpy
 - matplotlib
 - scipy
+
+
+## Plotting
+GNUplot scripts for visualizing the performance of my models.
 
 
 ## Utils
