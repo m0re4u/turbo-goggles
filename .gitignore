@@ -108,5 +108,5 @@ venv.bak/
 test-output/
 babyai_treegen/vocab.json
 .log
-plotting/*.csv
+plotting/data
 
