@@ -109,4 +109,5 @@ test-output/
 babyai_treegen/vocab.json
 .log
 plotting/data
-
+utils/data
+utils/results

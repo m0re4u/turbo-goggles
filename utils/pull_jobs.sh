@@ -1,5 +1,4 @@
-
-#!/bin/bash
+#!/bin/bash -l
 # Pull run data from LISA for local analysis
 
 # strict on bash errors
@@ -17,16 +16,33 @@ LISA_RUNS_PATH="machine/runs/"
 LISA_HOSTNAME="lisa.surfsara.nl"
 LISA_ANALYZER_PATH="run_analyzer/"
 RUNS_EXTRACTOR="extract_tb_data.py"
+LISA_AGG_PATH="agg"
+
+function execute_agg {
+        ssh $SSH_ARGS $LISA_USERNAME@$LISA_HOSTNAME "source /hpc/eb/modules/init/bash;
+                                           export -f module;
+                                           module load Python/3.6.3-foss-2017b;
+                                           python3 $LISA_ANALYZER_PATH/$RUNS_EXTRACTOR $1 $2"
+}
 
 function pull_job {
     FOLDER=$(ssh $SSH_ARGS $LISA_USERNAME@$LISA_HOSTNAME "ls $LISA_RUNS_PATH | grep $1")
     # TODO? Make sure there's only one folder that we find
     FILE=$(ssh $SSH_ARGS $LISA_USERNAME@$LISA_HOSTNAME "ls $LISA_RUNS_PATH/$FOLDER")
-    echo $FILE
+    # echo $FILE
     rsync -e "ssh $SSH_ARGS" extract_tb_data.py $LISA_USERNAME@$LISA_HOSTNAME:$LISA_ANALYZER_PATH --update --progress
-    rpt=$(ssh $SSH_ARGS $LISA_USERNAME@$LISA_HOSTNAME "python3 $LISA_ANALYZER_PATH/$RUNS_EXTRACTOR")
-    echo $rpt
+    OUT_PREFIX="agg_$1"
+    execute_agg $LISA_RUNS_PATH/$FOLDER/$FILE $LISA_AGG_PATH/$OUT_PREFIX
+    rsync -e "ssh $SSH_ARGS" $LISA_USERNAME@$LISA_HOSTNAME:$LISA_AGG_PATH/$OUT_PREFIX* data/
+}
 
+function plot_job {
+    shopt -s nullglob
+    FS=(data/agg_$1_succes_rate)
+    if ! [ -z "$FS" ]; then
+        OUT=$(basename $FS)
+        gnuplot -e "filename='$FS.csv'; outfile='results/$OUT.png'" ../plotting/plot_ep_lengths.gnu
+    fi
 }
 
 if [ -z "$LISA_USERNAME" ]; then
@@ -41,6 +57,7 @@ for var in $@; do
     else
         echo "Pulling job $var"
         pull_job $var
+        plot_job $var
     fi
 done
 # # Check if input arguments are only numerical (job ids)
