@@ -3,7 +3,7 @@
 
 # strict on bash errors
 set -eu -o pipefail
-set -x
+
 function print_error {
     read line file <<<$(caller)
     echo "An error occurred in line $line of file $file:" >&2
@@ -36,12 +36,13 @@ function pull_job {
     rsync -e "ssh $SSH_ARGS" $LISA_USERNAME@$LISA_HOSTNAME:$LISA_AGG_PATH/$OUT_PREFIX* data/
 }
 
-function plot_job {
+function plot_jobs {
+    echo $*
     shopt -s nullglob
-    FS=(data/agg_$1_succes_rate)
+    FS=(data/agg_succes_rate)
     if ! [ -z "$FS" ]; then
         OUT=$(basename $FS)
-        gnuplot -e "filename='$FS.csv'; outfile='results/$OUT.png'" ../plotting/plot_ep_lengths.gnu
+        gnuplot -c ../plotting/plot_ep_lengths.gnu results/$OUT.png
     fi
 }
 
@@ -51,13 +52,25 @@ if [ -z "$LISA_USERNAME" ]; then
 fi
 
 re='^[0-9]+$'
-for var in $@; do
-    if ! [[ $var =~ $re ]] ; then
-        echo "$var is not a jobid, skipping.." >&2;
-    else
-        echo "Pulling job $var"
-        pull_job $var
-        plot_job $var
-    fi
-done
-# # Check if input arguments are only numerical (job ids)
+
+if ! [[ $* == *--plot* ]]; then
+    rm -f data/*
+    for var in $@; do
+        # Check if input arguments are only numerical (job ids)
+        if ! [[ $var =~ $re ]]; then
+            echo "$var is not a jobid, skipping.." >&2;
+        else
+            echo "Pulling job $var"
+            pull_job $var
+            job_arr+=($var)
+        fi
+    done
+else
+    for var in $@; do
+        if [[ $var =~ $re ]]; then
+            job_arr+=($var)
+        fi
+    done
+fi
+
+plot_jobs ${job_arr[@]}
