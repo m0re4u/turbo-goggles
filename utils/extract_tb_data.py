@@ -10,7 +10,11 @@ def main(filename, out_prefix):
 
     relevant_keys = ['train/succes_rate', 'train/episode_length']
     for key in relevant_keys:
-        data_to_csv(key, evt.scalars.Items(key), out_prefix)
+        try:
+            data_to_csv(key, evt.scalars.Items(key), out_prefix)
+        except KeyError as err:
+            print(err)
+            print(keys)
 
 
 def data_to_csv(key, data, output_prefix):

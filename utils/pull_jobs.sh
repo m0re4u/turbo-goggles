@@ -40,10 +40,10 @@ function plot_jobs {
     echo $*
     shopt -s nullglob
     FS=(data/agg_succes_rate)
-    if ! [ -z "$FS" ]; then
-        OUT=$(basename $FS)
-        gnuplot -c ../plotting/plot_ep_lengths.gnu results/$OUT.png
-    fi
+    # if ! [ -z "$FS" ]; then
+    #     OUT=$(basename $FS)
+    #     gnuplot -c ../plotting/plot_ep_lengths.gnu results/$OUT.png
+    # fi
 }
 
 if [ -z "$LISA_USERNAME" ]; then
