@@ -1,5 +1,5 @@
 set term png
-set output 'results/sr_no_pretrain_GoToLocal42.png'
+set output 'results/sr_no_pretrain_GoToLocal_avg.png'
 
 set key bottom right
 set datafile separator comma
