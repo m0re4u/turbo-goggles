@@ -35,3 +35,5 @@ GNUplot scripts for visualizing the performance of my models.
 ## Utils
 Some extra utilities:
 - `replace_infile.sh` loops over (SLURM output) files and tries to replace some text inside each file.
+- `pull_jobs.sh` connects to Lisa, and creates `.csv` files of tensorboard plots using `extract_tb_data.py`. Next, they are copied over to be used in plotting.
+- `average_all.sh` averages data over runs. Uses `average_data.py` to average over `.csv` files.
