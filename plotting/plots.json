@@ -1,0 +1,120 @@
+{
+    "plots": [
+        {
+            "title": "Run differences - GoTo - Word",
+            "ids": [
+                "2247228",
+                "2265464"
+            ],
+            "keys": [
+                "Word run 1",
+                "Word run 42"
+            ],
+            "smoothing": 100
+        },
+        {
+            "title": "Run differences - GoTo - Word annotated",
+            "ids": [
+                "2268406",
+                "2266710"
+            ],
+            "keys": [
+                "WA run 1",
+                "WA run 42"
+            ],
+            "smoothing": 100
+        },
+        {
+            "title": "Run differences - GoTo - Segment",
+            "ids": [
+                "2268405",
+                "2266711"
+            ],
+            "keys": [
+                "Segment run 1",
+                "Segment run 42"
+            ],
+            "smoothing": 100
+        },
+        {
+            "title": "Run differences - PickupLoc - Word",
+            "ids": [
+                "2247231",
+                "2265467"
+            ],
+            "keys": [
+                "Word run 1",
+                "Word run 42"
+            ],
+            "smoothing": 10
+        },
+        {
+            "title": "Run differences - PickupLoc - Word annotated",
+            "ids": [
+                "2268401",
+                "2266708"
+            ],
+            "keys": [
+                "Word annotated run 1",
+                "Word annotated run 42"
+            ],
+            "smoothing": 10
+        },
+        {
+            "title": "Run differences - PickupLoc - Segment",
+            "ids": [
+                "2268402",
+                "2266709"
+            ],
+            "keys": [
+                "Segment run 1",
+                "Segment run 42"
+            ],
+            "smoothing": 10
+        },
+        {
+            "title": "Averaged - PickupLoc - comparison",
+            "ids": [
+                "pre_PickupLoc_word_averaged",
+                "pre_PickupLoc_wordannotated_averaged",
+                "pre_PickupLoc_segment_averaged"
+            ],
+            "keys": [
+                "Word",
+                "WA",
+                "Segment"
+            ],
+            "smoothing": 10
+        },
+        {
+            "title": "Averaged - PutNextLocal - comparison",
+            "ids": [
+                "pre_PutNextLocal_word_averaged",
+                "pre_PutNextLocal_wordannotated_averaged",
+                "pre_PutNextLocal_segment_averaged"
+            ],
+            "keys": [
+                "Word",
+                "WA",
+                "Segment"
+            ],
+            "smoothing": 20
+        },
+        {
+            "title": "Averaged - GoTo - comparison",
+            "ids": [
+                "pre_GoTo_word_averaged",
+                "pre_GoTo_wordannotated_averaged",
+                "pre_GoTo_segment_averaged"
+            ],
+            "keys": [
+                "Word",
+                "WA",
+                "Segment"
+            ],
+            "smoothing": 100
+        }
+
+
+    ]
+}
