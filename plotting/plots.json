@@ -113,8 +113,16 @@
                 "Segment"
             ],
             "smoothing": 100
+        },
+        {
+            "title": "reason - CustomGoToObjSmall",
+            "ids": [
+                "2300034"
+            ],
+            "keys": [
+                "No reasoning"
+            ],
+            "smoothing": 10
         }
-
-
     ]
 }
