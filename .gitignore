@@ -112,3 +112,7 @@ plotting/data
 plotting/results
 utils/data
 utils/results
+
+train_diagnostic/reason_dataset
+*.pt
+
