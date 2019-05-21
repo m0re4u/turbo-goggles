@@ -32,6 +32,15 @@ Required packages:
 GNUplot scripts for visualizing the performance of my models.
 
 
+## Train diagnostic
+Files for training the diagnostic classifier over the hidden state of the ACModel LSTM.
+
+Required packages:
+- torch
+- numpy
+- machine
+
+
 ## Utils
 Some extra utilities:
 - `replace_infile.sh` loops over (SLURM output) files and tries to replace some text inside each file.
