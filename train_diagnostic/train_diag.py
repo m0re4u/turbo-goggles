@@ -56,7 +56,7 @@ def main(args):
     ).to(device)
     optimizer = torch.optim.Adam(model.parameters())
     criterion = torch.nn.NLLLoss()
-    for i in range(5):
+    for i in range(args.epochs):
         for n, batch in enumerate(train_loader):
             data_in = batch[0].to(device)
             label = batch[1].type(torch.long).to(device)
@@ -77,6 +77,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--data_dir", default="reason_dataset/", type=str,
                         help="Directory pointing to training data (REQUIRED)")
-
+    parser.add_argument("--epochs", default=2, type=int,
+                        help="How many epochs to train")
     args = parser.parse_args()
     main(args)
