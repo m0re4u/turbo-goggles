@@ -50,9 +50,9 @@ def main(args):
     train_loader = DataLoader(train_set, batch_size=32, shuffle=True, num_workers=0)
 
     model = torch.nn.Sequential(
-        torch.nn.Linear(128, 2),
+        torch.nn.Linear(128, 18),
         torch.nn.ReLU(),
-        torch.nn.Softmax(dim=1)
+        torch.nn.LogSoftmax(dim=1)
     ).to(device)
     optimizer = torch.optim.Adam(model.parameters())
     criterion = torch.nn.NLLLoss()
