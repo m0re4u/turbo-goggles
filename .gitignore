@@ -115,5 +115,6 @@ utils/results
 
 train_diagnostic/reason_dataset
 train_diagnostic/big_reason_dataset
+train_diagnostic/reason_dataset*
 *.pt
 
