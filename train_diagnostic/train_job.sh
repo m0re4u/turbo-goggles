@@ -12,7 +12,7 @@ module load Python/3.6.3-foss-2017b
 module load CUDA/9.0.176
 
 # Go to machine directory
-pushd ${HOME}/turbo-goggles/train_diag/
+pushd ${HOME}/turbo-goggles/train_diagnostic/
 
 # Run training
 python3 train_diag.py
