@@ -1,5 +1,6 @@
 import os
 import torch
+import logging
 import argparse
 
 import numpy as np
@@ -34,12 +35,14 @@ class DiagnosticDataset(Dataset):
         return len(self.embeddings)
 
 
-def validation_eval(val_set, model, do_entropy=False):
+def validation_eval(val_set, model, do_entropy=False, limit=-1):
     val_loader = DataLoader(val_set, batch_size=32,
                             shuffle=True, num_workers=0)
     correct = 0
     ents = []
     for n, batch in enumerate(val_loader):
+        if limit > 0 and n > limit:
+            break
         data_in = batch[0].to(device)
         label = batch[1].type(torch.long).to(device)
         h = model(data_in)
@@ -62,6 +65,7 @@ def main(args):
     train_loader = DataLoader(train_set, batch_size=32,
                               shuffle=True, num_workers=0)
 
+    logging.info(f"Initialized dataset")
     model = torch.nn.Sequential(
         torch.nn.Linear(128, 18),
         torch.nn.ReLU(),
@@ -70,6 +74,7 @@ def main(args):
     optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
     criterion = torch.nn.NLLLoss()
     for i in range(args.epochs):
+        logging.info(f"Start of epoch: {i}")
         for n, batch in enumerate(train_loader):
             data_in = batch[0].to(device)
             label = batch[1].type(torch.long).to(device)
@@ -82,12 +87,12 @@ def main(args):
                 val_acc, val_ent = validation_eval(
                     val_set, model, args.show_entropy)
                 train_acc, train_ent = validation_eval(
-                    train_set, model, args.show_entropy)
+                    train_set, model, args.show_entropy, limit=100)
                 if args.show_entropy:
-                    print(
+                    logging.info(
                         f"Epoch: {i:2} - Step {n:4} - Loss: {loss:1.03} - TAcc: {train_acc:1.04}({train_ent:1.04}) - VAcc: {val_acc:1.04} ({val_ent:1.04})")
                 else:
-                    print(
+                    logging.info(
                         f"Epoch: {i:2} - Step {n:4} - Loss: {loss:1.03} - TAcc: {train_acc:1.04} - VAcc: {val_acc:1.04}")
 
     torch.save(model.state_dict(), 'trained_diag.pt')
@@ -109,5 +114,10 @@ if __name__ == "__main__":
 
     torch.manual_seed(args.seed)
     np.random.seed(args.seed)
+
+    LOG_FORMAT = '%(asctime)s %(name)-6s %(levelname)-6s %(message)s'
+    logging.basicConfig(format=LOG_FORMAT,
+                    level=getattr(logging, level.upper()))
+
 
     main(args)
