@@ -117,7 +117,7 @@ if __name__ == "__main__":
 
     LOG_FORMAT = '%(asctime)s %(name)-6s %(levelname)-6s %(message)s'
     logging.basicConfig(format=LOG_FORMAT,
-                    level=getattr(logging, level.upper()))
+                    level=getattr(logging, info.upper()))
 
 
     main(args)
