@@ -36,7 +36,8 @@ class DiagnosticDataset(Dataset):
 
 
 def validation_eval(val_set, model, do_entropy=False, limit=-1):
-    val_loader = DataLoader(val_set, batch_size=32,
+    B_SIZE = 32
+    val_loader = DataLoader(val_set, batch_size=B_SIZE,
                             shuffle=True, num_workers=0)
     correct = 0
     ents = []
@@ -52,7 +53,11 @@ def validation_eval(val_set, model, do_entropy=False, limit=-1):
         _, output = h.max(1)
         local_acc = sum(label.flatten() == output)
         correct += local_acc.item()
-    return correct / len(val_set), np.average(ents)
+    if limit > 0:
+        div = limit * B_SIZE
+    else:
+        div = len(val_set)
+    return correct / div, np.average(ents)
 
 
 def main(args):
@@ -66,12 +71,14 @@ def main(args):
                               shuffle=True, num_workers=0)
 
     logging.info(f"Initialized dataset")
+
     model = torch.nn.Sequential(
         torch.nn.Linear(128, 18),
         torch.nn.ReLU(),
         torch.nn.LogSoftmax(dim=1)
     ).to(device)
-    optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
+
+    optimizer = torch.optim.Adam(model.parameters())
     criterion = torch.nn.NLLLoss()
     for i in range(args.epochs):
         logging.info(f"Start of epoch: {i}")
@@ -87,13 +94,13 @@ def main(args):
                 val_acc, val_ent = validation_eval(
                     val_set, model, args.show_entropy)
                 train_acc, train_ent = validation_eval(
-                    train_set, model, args.show_entropy, limit=100)
+                    train_set, model, args.show_entropy, limit=500)
                 if args.show_entropy:
                     logging.info(
-                        f"Epoch: {i:2} - Step {n:4} - Loss: {loss:1.03} - TAcc: {train_acc:1.04}({train_ent:1.04}) - VAcc: {val_acc:1.04} ({val_ent:1.04})")
+                        f"Epoch: {i:2} - Step {n:5} - Loss: {loss:1.3f} - TAcc: {train_acc:1.5f}({train_ent:1.5f}) - VAcc: {val_acc:1.5f} ({val_ent:1.5f})")
                 else:
                     logging.info(
-                        f"Epoch: {i:2} - Step {n:4} - Loss: {loss:1.03} - TAcc: {train_acc:1.04} - VAcc: {val_acc:1.04}")
+                        f"Epoch: {i:2} - Step {n:5} - Loss: {loss:1.3f} - TAcc: {train_acc:1.5f} - VAcc: {val_acc:1.5f}")
 
     torch.save(model.state_dict(), 'trained_diag.pt')
 
