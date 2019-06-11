@@ -149,4 +149,10 @@ if __name__ == "__main__":
     logging.basicConfig(format=LOG_FORMAT,
                         level=getattr(logging, 'info'.upper()))
 
+    config = vars(args)
+    logging.info("Parameters:")
+    for k, v in config.items():
+      logging.info(f"  {k:>21} : {v}")
+
+
     main(args)
