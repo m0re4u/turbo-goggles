@@ -60,6 +60,14 @@ def validation_eval(val_set, model, do_entropy=False, limit=-1):
     return correct / div, np.average(ents)
 
 
+def stop_on_accs(n, validation_accuracy, repeat_stop=5):
+    if (n // 300) > repeat_stop:
+        accs = np.array(validation_accuracy[-5:])
+        red = accs - accs[-1]
+        trth = np.isclose(red, np.zeros(red.shape))
+        return trth.all()
+
+
 def main(args):
     # Create dataset
     dataset = DiagnosticDataset(args.data_dir)
@@ -77,10 +85,15 @@ def main(args):
         torch.nn.ReLU(),
         torch.nn.LogSoftmax(dim=1)
     ).to(device)
-
-    optimizer = torch.optim.Adam(model.parameters())
+    optimizer = torch.optim.Adam(model.parameters(), lr=args.lr)
     criterion = torch.nn.NLLLoss()
+
+    val_accs = []
+    stop = False
+
     for i in range(args.epochs):
+        if stop is True:
+            break
         logging.info(f"Start of epoch: {i}")
         for n, batch in enumerate(train_loader):
             data_in = batch[0].to(device)
@@ -95,6 +108,8 @@ def main(args):
                     val_set, model, args.show_entropy)
                 train_acc, train_ent = validation_eval(
                     train_set, model, args.show_entropy, limit=500)
+                val_accs.append(val_acc)
+
                 if args.show_entropy:
                     logging.info(
                         f"Epoch: {i:2} - Step {n:5} - Loss: {loss:1.3f} - TAcc: {train_acc:1.5f}({train_ent:1.5f}) - VAcc: {val_acc:1.5f} ({val_ent:1.5f})")
@@ -102,21 +117,29 @@ def main(args):
                     logging.info(
                         f"Epoch: {i:2} - Step {n:5} - Loss: {loss:1.3f} - TAcc: {train_acc:1.5f} - VAcc: {val_acc:1.5f}")
 
+                if stop_on_accs(n, val_accs, args.repeat_stop):
+                    logging.warning("Stopping after stuck validation accuracy")
+                    stop = True
+                    break
+
     torch.save(model.state_dict(), 'trained_diag.pt')
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+    parser = argparse.ArgumentParser(
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument("--data_dir", default="reason_dataset/", type=str,
                         help="Directory pointing to training data (REQUIRED)")
     parser.add_argument("--epochs", default=2, type=int,
                         help="How many epochs to train")
-    parser.add_argument("--lr", default=0.01, type=float,
+    parser.add_argument("--lr", default=0.001, type=float,
                         help="Learning rate for Adam optimizer")
     parser.add_argument("--show_entropy", default=False, action='store_true',
                         help="Show entropy of prediction tensor")
     parser.add_argument("--seed", default=1, type=int,
                         help="Seeding")
+    parser.add_argument("--repeat_stop", default=5, type=int,
+                        help="How many steps to check for validation accuracy stuck")
     args = parser.parse_args()
 
     torch.manual_seed(args.seed)
@@ -124,7 +147,6 @@ if __name__ == "__main__":
 
     LOG_FORMAT = '%(asctime)s %(name)-6s %(levelname)-6s %(message)s'
     logging.basicConfig(format=LOG_FORMAT,
-                    level=getattr(logging, 'info'.upper()))
-
+                        level=getattr(logging, 'info'.upper()))
 
     main(args)
