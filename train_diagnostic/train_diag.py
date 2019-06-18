@@ -109,7 +109,7 @@ def main(args):
                 val_acc, val_ent = validation_eval(
                     val_set, model, args.show_entropy)
                 train_acc, train_ent = validation_eval(
-                    train_set, model, args.show_entropy, limit=500)
+                    train_set, model, args.show_entropy, limit=-1)
                 val_accs.append(val_acc)
 
                 if args.show_entropy:
@@ -132,7 +132,7 @@ if __name__ == "__main__":
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument("--data_dir", default="reason_dataset/", type=str,
                         help="Directory pointing to training data (REQUIRED)")
-    parser.add_argument("--epochs", default=5, type=int,
+    parser.add_argument("--epochs", default=20, type=int,
                         help="How many epochs to train")
     parser.add_argument("--lr", default=0.001, type=float,
                         help="Learning rate for Adam optimizer")
@@ -140,7 +140,7 @@ if __name__ == "__main__":
                         help="Show entropy of prediction tensor")
     parser.add_argument("--seed", default=1, type=int,
                         help="Seeding")
-    parser.add_argument("--repeat_stop", default=5, type=int,
+    parser.add_argument("--repeat_stop", default=10, type=int,
                         help="How many steps to check for validation accuracy stuck")
     args = parser.parse_args()
 
