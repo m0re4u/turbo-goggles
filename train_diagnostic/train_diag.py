@@ -62,7 +62,7 @@ def validation_eval(val_set, model, do_entropy=False, limit=-1):
 
 def stop_on_accs(n, validation_accuracy, repeat_stop=5):
     if (n // 300) > repeat_stop:
-        accs = np.array(validation_accuracy[-5:])
+        accs = np.array(validation_accuracy[-repeat_stop:])
         red = accs - accs[-1]
         trth = np.isclose(red, np.zeros(red.shape))
         return trth.all()
@@ -89,6 +89,7 @@ def main(args):
     criterion = torch.nn.NLLLoss()
 
     val_accs = []
+    t = 0
     stop = False
 
     for i in range(args.epochs):
@@ -96,6 +97,7 @@ def main(args):
             break
         logging.info(f"Start of epoch: {i}")
         for n, batch in enumerate(train_loader):
+            t+=1
             data_in = batch[0].to(device)
             label = batch[1].type(torch.long).to(device)
             optimizer.zero_grad()
@@ -117,7 +119,7 @@ def main(args):
                     logging.info(
                         f"Epoch: {i:2} - Step {n:5} - Loss: {loss:1.3f} - TAcc: {train_acc:1.5f} - VAcc: {val_acc:1.5f}")
 
-                if stop_on_accs(n, val_accs, args.repeat_stop):
+                if stop_on_accs(t, val_accs, args.repeat_stop):
                     logging.warning("Stopping after stuck validation accuracy")
                     stop = True
                     break
@@ -130,7 +132,7 @@ if __name__ == "__main__":
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument("--data_dir", default="reason_dataset/", type=str,
                         help="Directory pointing to training data (REQUIRED)")
-    parser.add_argument("--epochs", default=2, type=int,
+    parser.add_argument("--epochs", default=5, type=int,
                         help="How many epochs to train")
     parser.add_argument("--lr", default=0.001, type=float,
                         help="Learning rate for Adam optimizer")
