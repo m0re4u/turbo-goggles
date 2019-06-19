@@ -82,11 +82,11 @@ def main(args):
 
     model = torch.nn.Sequential(
         torch.nn.Linear(128, 18),
-        torch.nn.ReLU(),
-        torch.nn.LogSoftmax(dim=1)
+        # torch.nn.ReLU(),
+        # torch.nn.Linear(32, 18),
     ).to(device)
     optimizer = torch.optim.Adam(model.parameters(), lr=args.lr)
-    criterion = torch.nn.NLLLoss()
+    criterion = torch.nn.CrossEntropyLoss()
 
     val_accs = []
     t = 0
