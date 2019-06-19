@@ -132,7 +132,7 @@ if __name__ == "__main__":
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument("--data_dir", default="reason_dataset/", type=str,
                         help="Directory pointing to training data (REQUIRED)")
-    parser.add_argument("--epochs", default=20, type=int,
+    parser.add_argument("--epochs", default=50, type=int,
                         help="How many epochs to train")
     parser.add_argument("--lr", default=0.001, type=float,
                         help="Learning rate for Adam optimizer")
