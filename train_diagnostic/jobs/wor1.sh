@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -N 1
 #SBATCH -p gpu_shared
-#SBATCH -t 1:00:00
+#SBATCH -t 3:00:00
 #SBATCH --mem=12GB
 
 #SBATCH --mail-type=END
@@ -15,4 +15,4 @@ module load CUDA/9.0.176
 pushd ${HOME}/turbo-goggles/train_diagnostic/
 
 # Run training
-python3 train_diag.py --seed 1 --data_dir data/WOR/
+python3 train_diag.py --seed 1 --data_dir data/WOR/ --epochs 500
