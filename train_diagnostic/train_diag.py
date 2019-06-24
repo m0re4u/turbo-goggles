@@ -13,9 +13,13 @@ from machine.util.agent import ModelAgent
 
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+BATCH_SIZE = 32
 
 
 class DiagnosticDataset(Dataset):
+    """
+    Dataset used in training the diagnostic classifier.
+    """
     def __init__(self, dirname):
         files = [f for f in os.listdir(
             dirname) if os.path.isfile(os.path.join(dirname, f))]
