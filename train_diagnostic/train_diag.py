@@ -13,7 +13,7 @@ from machine.util.agent import ModelAgent
 
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-BATCH_SIZE = 32
+BATCH_SIZE = 64
 
 
 class DiagnosticDataset(Dataset):
