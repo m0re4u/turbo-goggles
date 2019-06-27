@@ -137,8 +137,8 @@ def main(args):
                     logging.warning("Stopping after stuck validation accuracy")
                     stop = True
                     break
-
-    torch.save(model.state_dict(), 'trained_diag.pt')
+    print(f"Saving trained model to {args.outfile} with T:{train_acc:1.5f} V:{val_acc:1.5f}")
+    torch.save(model.state_dict(), args.outfile)
 
 
 if __name__ == "__main__":
@@ -158,6 +158,9 @@ if __name__ == "__main__":
                         help="How many steps to check for validation accuracy stuck")
     parser.add_argument("--print_every", default=100, type=int,
                         help="Print every X batches")
+    parser.add_argument("--outfile", default='trained_diag.pt', type=str,
+                        help="Trained network output name")
+
     args = parser.parse_args()
 
     torch.manual_seed(args.seed)
