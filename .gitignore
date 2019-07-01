@@ -117,6 +117,9 @@ train_diagnostic/reason_dataset
 train_diagnostic/big_reason_dataset
 train_diagnostic/reason_dataset*
 train_diagnostic/data
+train_diagnostic/test.py
+train_diagnostic/read.py
+train_diagnostic/combine_data.sh
 *.pt
 *.out
 *.npy
