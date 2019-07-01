@@ -20,6 +20,7 @@ class DiagnosticDataset(Dataset):
     """
     Dataset used in training the diagnostic classifier.
     """
+
     def __init__(self, dirname):
         files = [f for f in os.listdir(
             dirname) if os.path.isfile(os.path.join(dirname, f))]
@@ -137,7 +138,8 @@ def main(args):
                     logging.warning("Stopping after stuck validation accuracy")
                     stop = True
                     break
-    print(f"Saving trained model to {args.outfile} with T:{train_acc:1.5f} V:{val_acc:1.5f}")
+    print(
+        f"Saving trained model to {args.outfile} with T:{train_acc:1.5f} V:{val_acc:1.5f}")
     torch.save(model.state_dict(), args.outfile)
 
 

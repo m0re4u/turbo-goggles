@@ -25,6 +25,8 @@ rm -f final_results_$EPISODES.log
 touch final_results_$EPISODES.log
 
 run_datagather 2603358 005600 BabyAI-CustomGoToObjSmall-v0 small_new_seed1
+run_datagather 2613725 006500 BabyAI-CustomGoToObjSmall-v0 small_new_seed42
+run_datagather 2613726 005900 BabyAI-CustomGoToObjSmall-v0 small_new_seed100
 run_datagather 2604666 005900 BabyAI-CustomGoToObjAndOr-v0 andor_new_seed1
 run_datagather 2607672 005400 BabyAI-CustomGoToObjAndOr-v0 andor_new_seed42
 run_datagather 2607673 006200 BabyAI-CustomGoToObjAndOr-v0 andor_new_seed100
