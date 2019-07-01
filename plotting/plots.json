@@ -123,6 +123,40 @@
                 "No reasoning"
             ],
             "smoothing": 10
+        },
+        {
+            "title": "hidden(detached) - CustomGoToObjSmall",
+            "ids": [
+                "2533555",
+                "2533556",
+                "2501148",
+                "2501149",
+                "2554084",
+                "2554085",
+                "2554086"
+            ],
+            "keys": [
+                "detached 1",
+                "detached 42",
+                "attached 1",
+                "attached 42",
+                "detached 2",
+                "detached 3",
+                "detached 100"
+            ],
+            "smoothing": 10
+        },
+        {
+            "title": "CustomGoToObjMedium",
+            "ids": [
+                "2575696",
+                "2575698"
+            ],
+            "keys": [
+                "detached 1",
+                "detached 42"
+            ],
+            "smoothing": 10
         }
     ]
 }

@@ -12,8 +12,8 @@ function eval_diag_online {
     # $4 diag model name
     python3 ../../machine/eval_rl.py \
     --env $3 \
-    --model ../../machine/models/$(ls $MODEL_DIR | grep $1)/$2_check.pt \
-    --vocab ../../machine/models/$(ls $MODEL_DIR | grep $1)/vocab.json \
+    --model ../../machine/models/$(ls $BABY_MODEL_DIR | grep $1)/$2_check.pt \
+    --vocab ../../machine/models/$(ls $BABY_MODEL_DIR | grep $1)/vocab.json \
     --reasoning diagnostic \
     --diag_model $DIAG_MODEL_DIR/$4
     --episodes $EPISODES > output.log
