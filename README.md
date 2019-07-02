@@ -33,7 +33,7 @@ GNUplot scripts for visualizing the performance of my models.
 
 
 ## Train diagnostic
-Files for training the diagnostic classifier over the hidden state of the ACModel LSTM.
+Files for training the diagnostic classifier over the hidden state of the ACModel LSTM. Additional functionality include gathering experience for datasets, examining the output of the trained models and online evaluation in the RL setting.
 
 Required packages:
 - torch
@@ -46,3 +46,5 @@ Some extra utilities:
 - `replace_infile.sh` loops over (SLURM output) files and tries to replace some text inside each file.
 - `pull_jobs.sh` connects to Lisa, and creates `.csv` files of tensorboard plots using `extract_tb_data.py`. Next, they are copied over to be used in plotting.
 - `average_all.sh` averages data over runs. Uses `average_data.py` to average over `.csv` files.
+- `download_model.sh` downloads models from Lisa using job ids.
+- `download_runs.sh` downloads tensorboard run files from Lisa using job ids.
