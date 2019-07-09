@@ -21,14 +21,14 @@ function transfer_eval {
         --diag_targets $3 \
         --machine \
         --seed $i \
-        --episodes $EPISODES >> transfer_eval_$EPISODES_$LEVEL.log;
-        sed -i '${s/$/'",$5_$i"'/}' "transfer_eval_$EPISODES_$LEVEL.log"
+        --episodes $EPISODES >> transfer_eval_"$EPISODES"_$LEVEL.log;
+        sed -i '${s/$/'",$5_$i"'/}' "transfer_eval_"$EPISODES"_$LEVEL.log"
     done
 }
 
 
-rm -f transfer_eval_$EPISODES_$LEVEL.log
-touch transfer_eval_$EPISODES_$LEVEL.log
+rm -f transfer_eval_"$EPISODES"_$LEVEL.log
+touch transfer_eval_"$EPISODES"_$LEVEL.log
 
 
 # Small level
