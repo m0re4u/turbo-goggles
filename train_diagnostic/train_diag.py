@@ -96,7 +96,7 @@ def main(args):
     logging.info(f"Initialized dataset: {len(train_loader)} batches")
 
     model = torch.nn.Sequential(
-        torch.nn.Linear(128, 18),
+        torch.nn.Linear(128, args.n_targets),
         # torch.nn.ReLU(),
         # torch.nn.Linear(32, 18),
     ).to(device)
@@ -148,6 +148,8 @@ if __name__ == "__main__":
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument("--data_dir", default="data/reason_dataset/", type=str,
                         help="Directory pointing to training data (REQUIRED)")
+    parser.add_argument("--n_targets", default=18, type=int,
+                        help="number of targets for diagnostic classifier")
     parser.add_argument("--epochs", default=50, type=int,
                         help="How many epochs to train")
     parser.add_argument("--lr", default=0.001, type=float,

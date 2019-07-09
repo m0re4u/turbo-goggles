@@ -18,11 +18,11 @@ function eval_diag_online {
         --vocab ../../machine/models/$(ls $BABY_MODEL_DIR | grep $1)/vocab.json \
         --reasoning diagnostic \
         --diag_model $DIAG_MODEL_DIR/$4_diagseed$i.pt \
-        --episodes $EPISODES > output.log
-        ACC=$(cat output.log | grep Accuracy)
-        echo "$4 $i  | $ACC " >> eval_diag_$EPISODES.log
+        --machine \
+        --seed $i \
+        --episodes $EPISODES >> eval_diag_$EPISODES.log;
+        sed -i '${s/$/'",$4_$i"'/}' "eval_diag_$EPISODES.log"
     done
-
 }
 
 
