@@ -122,4 +122,5 @@ train_diagnostic/read.py
 train_diagnostic/combine_data.sh
 *.pt
 *.out
+*.csv
 *.npy
