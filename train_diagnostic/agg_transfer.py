@@ -41,6 +41,8 @@ def main(args):
             n_spl = name.split('_')
             if args.baseline:
                 mkey = f"{n_spl[0]}_{n_spl[1]}"
+            elif args.trained_transfer:
+                mkey = f"{n_spl[1]}_{n_spl[2]}_{n_spl[4]}"
             else:
                 mkey = f"{n_spl[0]}_{n_spl[1]}_{n_spl[3]}"
             print(mkey)
@@ -72,5 +74,6 @@ if __name__ == "__main__":
     parser.add_argument("--filename", type=str, default="transfer_eval_100.log",
                         help="")
     parser.add_argument("--baseline", default=False, action='store_true',help="run in baseline mode")
+    parser.add_argument("--trained_transfer", default=False, action='store_true',help="trained transfer model results")
     args = parser.parse_args()
     main(args)

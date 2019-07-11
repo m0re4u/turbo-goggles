@@ -45,23 +45,120 @@
             "smoothing": 10
         },
         {
-            "title": "TransferSmall",
+            "title": "Transfer Small Baseline vs Diagnostic Color",
             "ids": [
-                "2629753",
-                "2629756",
-                "2629758",
-                "2629754",
-                "2629789",
-                "2629790"
+                "base_small_0_averaged",
+                "new_small_0_averaged"
             ],
             "keys": [
-                "base 0",
-                "base 1",
-                "base 2",
-                "new 0",
-                "new 1",
-                "new 2"
+                "baseline",
+                "diagnostic"
             ],
+            "xlim": [0,400],
+            "smoothing": 10
+        },
+        {
+            "title": "Transfer Small Baseline vs Diagnostic Obj",
+            "ids": [
+                "base_small_1_averaged",
+                "new_small_1_averaged"
+            ],
+            "keys": [
+                "baseline",
+                "diagnostic"
+            ],
+            "xlim": [0,400],
+            "smoothing": 10
+        },
+        {
+            "title": "Transfer Small Baseline vs Diagnostic Color+Object",
+            "ids": [
+                "base_small_2_averaged",
+                "new_small_2_averaged"
+            ],
+            "keys": [
+                "baseline",
+                "diagnostic"
+            ],
+            "xlim": [0,400],
+            "smoothing": 10
+        },
+        {
+            "title": "Transfer BeforeAfter Baseline vs Diagnostic Color",
+            "ids": [
+                "base_beforeafter_0_averaged",
+                "new_beforeafter_0_averaged"
+            ],
+            "keys": [
+                "baseline",
+                "diagnostic"
+            ],
+            "xlim": [0,400],
+            "smoothing": 10
+        },
+        {
+            "title": "Transfer BeforeAfter Baseline vs Diagnostic Obj",
+            "ids": [
+                "base_beforeafter_1_averaged",
+                "new_beforeafter_1_averaged"
+            ],
+            "keys": [
+                "baseline",
+                "diagnostic"
+            ],
+            "xlim": [0,400],
+            "smoothing": 10
+        },
+        {
+            "title": "Transfer BeforeAfter Baseline vs Diagnostic Color+Object",
+            "ids": [
+                "base_beforeafter_2_averaged",
+                "new_beforeafter_2_averaged"
+            ],
+            "keys": [
+                "baseline",
+                "diagnostic"
+            ],
+            "xlim": [0,400],
+            "smoothing": 10
+        },
+        {
+            "title": "Transfer AndOr Baseline vs Diagnostic Color",
+            "ids": [
+                "base_andor_0_averaged",
+                "new_andor_0_averaged"
+            ],
+            "keys": [
+                "baseline",
+                "diagnostic"
+            ],
+            "xlim": [0,400],
+            "smoothing": 10
+        },
+        {
+            "title": "Transfer AndOr Baseline vs Diagnostic Obj",
+            "ids": [
+                "base_andor_1_averaged",
+                "new_andor_1_averaged"
+            ],
+            "keys": [
+                "baseline",
+                "diagnostic"
+            ],
+            "xlim": [0,400],
+            "smoothing": 10
+        },
+        {
+            "title": "Transfer AndOr Baseline vs Diagnostic Color+Object",
+            "ids": [
+                "base_andor_2_averaged",
+                "new_andor_2_averaged"
+            ],
+            "keys": [
+                "baseline",
+                "diagnostic"
+            ],
+            "xlim": [0,400],
             "smoothing": 10
         }
     ]

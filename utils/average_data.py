@@ -28,9 +28,15 @@ def main(args):
 
     # Output file
     if args.sr:
-        output_file = f"sr_pre_{args.level}_{args.segment_level}_averaged.csv"
+        prefix = "sr"
     else:
-        output_file = f"el_pre_{args.level}_{args.segment_level}_averaged.csv"
+        prefix = "el"
+
+    if args.outfile is None:
+        output_file = f"{prefix}_{args.level}_{args.segment_level}_averaged.csv"
+    else:
+        output_file = f"{prefix}_{args.outfile.replace(' ', '_')}_averaged.csv"
+
     np.savetxt(output_file, out, delimiter=",",
                header="Wall time,Step,Value", fmt="%g")
 
@@ -39,8 +45,10 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("jobids", type=str, nargs="+",
                         help="input job ids to find CSVs for")
-    parser.add_argument("--level", type=str, required=True,
+    parser.add_argument("--level", type=str,
                         help="level data to average")
+    parser.add_argument("--outfile", type=str, default=None,
+                        help="output filename")
     parser.add_argument('--segment_level', type=str, default='word', choices=['word', 'segment', 'wordannotated'],
                         help='Segmentation level')
     parser.add_argument('--sr', action='store_true',
