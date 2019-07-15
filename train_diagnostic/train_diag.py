@@ -138,8 +138,12 @@ def main(args):
                     logging.warning("Stopping after stuck validation accuracy")
                     stop = True
                     break
-    print(
-        f"Saving trained model to {args.outfile} with T:{train_acc:1.5f} V:{val_acc:1.5f}")
+
+    if args.machine:
+        print(f"{args.outfile.replace('.pt','')},{train_acc:1.5f},{val_acc:1.5f}")
+    else:
+        print(
+            f"Saving trained model to {args.outfile} with T:{train_acc:1.5f} V:{val_acc:1.5f}")
     torch.save(model.state_dict(), args.outfile)
 
 
@@ -164,6 +168,8 @@ if __name__ == "__main__":
                         help="Print every X batches")
     parser.add_argument("--outfile", default='trained_diag.pt', type=str,
                         help="Trained network output name")
+    parser.add_argument("--machine", default=False, action='store_true',
+                        help="no print, machine output of stats")
 
     args = parser.parse_args()
 
@@ -174,7 +180,8 @@ if __name__ == "__main__":
     LOG_FORMAT = '%(asctime)s %(name)-6s %(levelname)-6s %(message)s'
     logging.basicConfig(format=LOG_FORMAT,
                         level=getattr(logging, 'info'.upper()))
-
+    if args.machine:
+        logging.disable(logging.CRITICAL)
     config = vars(args)
     logging.info("Parameters:")
     for k, v in config.items():

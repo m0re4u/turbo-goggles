@@ -20,6 +20,7 @@ function transfer_eval {
         --reasoning diagnostic \
         --diag_targets $3 \
         --machine \
+        --drop_diag \
         --seed $i \
         --episodes $EPISODES >> transfer_eval_"$EPISODES"_$LEVEL.log;
         sed -i '${s/$/'",$5_$i"'/}' "transfer_eval_"$EPISODES"_$LEVEL.log"
@@ -32,32 +33,32 @@ touch transfer_eval_"$EPISODES"_$LEVEL.log
 
 
 # Small level
-if [ $2 == 'small' ]; then
+if [ "$LEVEL" == 'small' ]; then
     echo "Small"
-    transfer_eval 2300034 007600 21 BabyAI-TransferGoToObjSmall0-v0 base_small_1_color
-    transfer_eval 2489287 007600 21 BabyAI-TransferGoToObjSmall0-v0 base_small_42_color
-    transfer_eval 2607643 007100 21 BabyAI-TransferGoToObjSmall0-v0 base_small_100_color
+    # transfer_eval 2300034 007600 21 BabyAI-TransferGoToObjSmall0-v0 base_small_1_color
+    # transfer_eval 2489287 007600 21 BabyAI-TransferGoToObjSmall0-v0 base_small_42_color
+    # transfer_eval 2607643 007100 21 BabyAI-TransferGoToObjSmall0-v0 base_small_100_color
 
-    transfer_eval 2300034 007600 24 BabyAI-TransferGoToObjSmall1-v0 base_small_1_obj
-    transfer_eval 2489287 007600 24 BabyAI-TransferGoToObjSmall1-v0 base_small_42_obj
-    transfer_eval 2607643 007100 24 BabyAI-TransferGoToObjSmall1-v0 base_small_100_obj
+    # transfer_eval 2300034 007600 24 BabyAI-TransferGoToObjSmall1-v0 base_small_1_obj
+    # transfer_eval 2489287 007600 24 BabyAI-TransferGoToObjSmall1-v0 base_small_42_obj
+    # transfer_eval 2607643 007100 24 BabyAI-TransferGoToObjSmall1-v0 base_small_100_obj
 
-    transfer_eval 2300034 007600 28 BabyAI-TransferGoToObjSmall2-v0 base_small_1_colobj
-    transfer_eval 2489287 007600 28 BabyAI-TransferGoToObjSmall2-v0 base_small_42_colobj
-    transfer_eval 2607643 007100 28 BabyAI-TransferGoToObjSmall2-v0 base_small_100_colobj
+    # transfer_eval 2300034 007600 28 BabyAI-TransferGoToObjSmall2-v0 base_small_1_colobj
+    # transfer_eval 2489287 007600 28 BabyAI-TransferGoToObjSmall2-v0 base_small_42_colobj
+    # transfer_eval 2607643 007100 28 BabyAI-TransferGoToObjSmall2-v0 base_small_100_colobj
 
-    transfer_eval 2603358 005600 21 BabyAI-TransferGoToObjSmall0-v0 new_small_1_color
-    transfer_eval 2613725 006500 21 BabyAI-TransferGoToObjSmall0-v0 new_small_42_color
-    transfer_eval 2613726 005900 21 BabyAI-TransferGoToObjSmall0-v0 new_small_100_color
+    transfer_eval 2651250 012200 21 BabyAI-TransferGoToObjSmall0-v0 new_small_1_color
+    # transfer_eval 2613725 006500 21 BabyAI-TransferGoToObjSmall0-v0 new_small_42_color
+    # transfer_eval 2613726 005900 21 BabyAI-TransferGoToObjSmall0-v0 new_small_100_color
 
-    transfer_eval 2603358 005600 24 BabyAI-TransferGoToObjSmall1-v0 new_small_1_obj
-    transfer_eval 2613725 006500 24 BabyAI-TransferGoToObjSmall1-v0 new_small_42_obj
-    transfer_eval 2613726 005900 24 BabyAI-TransferGoToObjSmall1-v0 new_small_100_obj
+    transfer_eval 2651250 012200 24 BabyAI-TransferGoToObjSmall1-v0 new_small_1_obj
+    # transfer_eval 2613725 006500 24 BabyAI-TransferGoToObjSmall1-v0 new_small_42_obj
+    # transfer_eval 2613726 005900 24 BabyAI-TransferGoToObjSmall1-v0 new_small_100_obj
 
-    transfer_eval 2603358 005600 28 BabyAI-TransferGoToObjSmall2-v0 new_small_1_colobj
-    transfer_eval 2613725 006500 28 BabyAI-TransferGoToObjSmall2-v0 new_small_42_colobj
-    transfer_eval 2613726 005900 28 BabyAI-TransferGoToObjSmall2-v0 new_small_100_colobj
-elif [ "$2" == "beforeafter" ]; then
+    transfer_eval 2651250 012200 28 BabyAI-TransferGoToObjSmall2-v0 new_small_1_colobj
+    # transfer_eval 2613725 006500 28 BabyAI-TransferGoToObjSmall2-v0 new_small_42_colobj
+    # transfer_eval 2613726 005900 28 BabyAI-TransferGoToObjSmall2-v0 new_small_100_colobj
+elif [ "$LEVEL" == "beforeafter" ]; then
     # Medium level (Beforeafter)
     echo "Beforeafter"
     transfer_eval 2604660 003000 21 BabyAI-TransferGoToObjBeforeAfter0-v0 base_beforeafter_1_color
@@ -83,7 +84,7 @@ elif [ "$2" == "beforeafter" ]; then
     transfer_eval 2604667 005400 28 BabyAI-TransferGoToObjBeforeAfter2-v0 new_beforeafter_1_colobj
     transfer_eval 2607675 005600 28 BabyAI-TransferGoToObjBeforeAfter2-v0 new_beforeafter_42_colobj
     transfer_eval 2607674 006500 28 BabyAI-TransferGoToObjBeforeAfter2-v0 new_beforeafter_100_colobj
-elif [ "$2" == "andor" ]; then
+elif [ "$LEVEL" == "andor" ]; then
     # AndOr level
     echo "andor"
     transfer_eval 2604665 002300 21 BabyAI-TransferGoToObjAndOr0-v0 base_andor_1_color
