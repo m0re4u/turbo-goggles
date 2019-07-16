@@ -45,6 +45,18 @@
             "smoothing": 10
         },
         {
+            "title": "UnblockSmall Baseline vs Diagnostic",
+            "ids": [
+                "unblock_base_averaged",
+                "unblock_diagnostic_averaged"
+            ],
+            "keys": [
+                "baseline",
+                "diagnostic"
+            ],
+            "smoothing": 10
+        },
+        {
             "title": "Transfer Small Baseline vs Diagnostic Color",
             "ids": [
                 "base_small_0_averaged",
@@ -159,6 +171,20 @@
                 "diagnostic"
             ],
             "xlim": [0,400],
+            "smoothing": 10
+        },
+        {
+            "title": "Training drop",
+            "ids": [
+                "2300034",
+                "2651250"
+            ],
+            "keys": [
+                "baseline",
+                "diagnostic"
+            ],
+            "xlim":[2000, 10000],
+            "ylim":[0, 40],
             "smoothing": 10
         }
     ]

@@ -40,6 +40,8 @@ def create_plot(plot, data_dir="data/", result_dir="results/", show=False, mode=
     plt.gcf().text(0, 0.01, plot['ids'], fontsize=8)
     if 'xlim' in plot:
         plt.xlim(*plot['xlim'])
+    if 'ylim' in plot:
+        plt.ylim(*plot['ylim'])
     for i, id in enumerate(plot['ids']):
         file, ylabel = get_data(id, mode, data_dir)
         data = np.loadtxt(file, skiprows=1, delimiter=',')

@@ -33,7 +33,7 @@ for var in $@; do
     elif ! [[ $var =~ $re ]]; then
         echo "$var is not a jobid, skipping.." >&2;
     else
-        echo "Pulling latest model from: $var"
+        echo "Pulling model from: $var"
         DIRNAME=$(ssh $SSH_ARGS $LISA_USERNAME@$LISA_HOSTNAME "ls $LISA_MODEL_PATH/ | grep $var")
 
         # What checkpoint does need to be copied
