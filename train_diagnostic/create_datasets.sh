@@ -24,10 +24,12 @@ function create_datasets {
 rm -f create_datasets_$EPISODES.log
 touch create_datasets_$EPISODES.log
 
-create_datasets 2651250 010000 BabyAI-CustomGoToObjSmall-v0 small_new_seed1
-create_datasets 2654157 010000 BabyAI-CustomGoToObjSmall-v0 small_new_seed42
 create_datasets 2654515 010000 BabyAI-CustomGoToObjSmall-v0 small_base_seed1
-# create_datasets 2654158 009200 BabyAI-CustomGoToObjSmall-v0 small_new_seed100
+create_datasets 2669640 010000 BabyAI-CustomGoToObjSmall-v0 small_base_seed42
+create_datasets 2669641 010000 BabyAI-CustomGoToObjSmall-v0 small_base_seed100
+create_datasets 2651250 010000 BabyAI-CustomGoToObjSmall-v0 small_new_seed1
+create_datasets 2654157 009900 BabyAI-CustomGoToObjSmall-v0 small_new_seed42
+create_datasets 2669857 011000 BabyAI-CustomGoToObjSmall-v0 small_new_seed100
 
 # create_datasets 2604666 005900 BabyAI-CustomGoToObjAndOr-v0 andor_new_seed1
 # create_datasets 2607672 005400 BabyAI-CustomGoToObjAndOr-v0 andor_new_seed42
@@ -35,8 +37,6 @@ create_datasets 2654515 010000 BabyAI-CustomGoToObjSmall-v0 small_base_seed1
 # create_datasets 2604667 005400 BabyAI-CustomGoToObjMedium-v0 beforeafter_new_seed1
 # create_datasets 2607675 005600 BabyAI-CustomGoToObjMedium-v0 beforeafter_new_seed42
 # create_datasets 2607674 006500 BabyAI-CustomGoToObjMedium-v0 beforeafter_new_seed100
-# create_datasets 2489287 007600 BabyAI-CustomGoToObjSmall-v0 small_base_seed42
-# create_datasets 2607643 007100 BabyAI-CustomGoToObjSmall-v0 small_base_seed100
 # create_datasets 2604660 003000 BabyAI-CustomGoToObjMedium-v0 beforeafter_base_seed1
 # create_datasets 2607640 007000 BabyAI-CustomGoToObjMedium-v0 beforeafter_base_seed42
 # create_datasets 2607638 007100 BabyAI-CustomGoToObjMedium-v0 beforeafter_base_seed100
