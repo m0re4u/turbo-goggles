@@ -27,9 +27,9 @@ touch create_datasets_$EPISODES.log
 create_datasets 2654515 010000 BabyAI-CustomGoToObjSmall-v0 small_base_seed1
 create_datasets 2669640 010000 BabyAI-CustomGoToObjSmall-v0 small_base_seed42
 create_datasets 2669641 010000 BabyAI-CustomGoToObjSmall-v0 small_base_seed100
-create_datasets 2651250 010000 BabyAI-CustomGoToObjSmall-v0 small_new_seed1
-create_datasets 2654157 009900 BabyAI-CustomGoToObjSmall-v0 small_new_seed42
-create_datasets 2669857 011000 BabyAI-CustomGoToObjSmall-v0 small_new_seed100
+create_datasets 2651250 010800 BabyAI-CustomGoToObjSmall-v0 small_new_seed1
+create_datasets 2654157 010800 BabyAI-CustomGoToObjSmall-v0 small_new_seed42
+create_datasets 2669857 010800 BabyAI-CustomGoToObjSmall-v0 small_new_seed100
 
 # create_datasets 2604666 005900 BabyAI-CustomGoToObjAndOr-v0 andor_new_seed1
 # create_datasets 2607672 005400 BabyAI-CustomGoToObjAndOr-v0 andor_new_seed42
