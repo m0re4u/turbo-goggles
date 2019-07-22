@@ -39,7 +39,7 @@ for var in $@; do
         # What checkpoint does need to be copied
         if [ ! -z $CHECK_ID ]; then
             CHECKPT="$CHECK_ID"_check.pt
-            FILES=($CHECKPT)
+            FILES=(vocab.json $CHECKPT)
         else
             FILES=$(ssh $SSH_ARGS $LISA_USERNAME@$LISA_HOSTNAME "ls $LISA_MODEL_PATH/$DIRNAME -t | head -2")
         fi
