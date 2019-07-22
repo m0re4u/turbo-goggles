@@ -56,8 +56,8 @@ python3 ../../machine/eval_rl.py \
 
 python3 ../../machine/eval_rl.py \
   --env BabyAI-CustomGoToObjSmall-v0 \
-  --model ../../machine/models/BabyAI-CustomGoToObjSmall-v0-_PPO_IAC_expert_filmcnn_gru_mem_seed1_job2603358_19-06-26-10-53-26/005600_check.pt \
-  --vocab ../../machine/models/BabyAI-CustomGoToObjSmall-v0-_PPO_IAC_expert_filmcnn_gru_mem_seed1_job2603358_19-06-26-10-53-26/vocab.json \
+  --model ../../machine/models/BabyAI-CustomGoToObjSmall-v0-_PPO_IAC_expert_filmcnn_gru_mem_seed42_job2654157_19-07-15-10-49-39/009900_check.pt \
+  --vocab ../../machine/models/BabyAI-CustomGoToObjSmall-v0-_PPO_IAC_expert_filmcnn_gru_mem_seed42_job2654157_19-07-15-10-49-39/vocab.json \
   --reasoning model \
   --episodes 5000;
 
