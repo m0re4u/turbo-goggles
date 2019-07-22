@@ -39,14 +39,13 @@ eval_diags_online 2669857 010800 BabyAI-CustomGoToObjSmall-v0 small_new_seed100
 # eval_diags_online 2604666 005900 BabyAI-CustomGoToObjAndOr-v0 andor_new_seed1
 # eval_diags_online 2607672 005400 BabyAI-CustomGoToObjAndOr-v0 andor_new_seed42
 # eval_diags_online 2607673 006200 BabyAI-CustomGoToObjAndOr-v0 andor_new_seed100
-# eval_diags_online 2604667 005400 BabyAI-CustomGoToObjMedium-v0 beforeafter_new_seed1
-# eval_diags_online 2607675 005600 BabyAI-CustomGoToObjMedium-v0 beforeafter_new_seed42
-# eval_diags_online 2607674 006500 BabyAI-CustomGoToObjMedium-v0 beforeafter_new_seed100
-# eval_diags_online 2489287 007600 BabyAI-CustomGoToObjSmall-v0 small_base_seed42
-# eval_diags_online 2607643 007100 BabyAI-CustomGoToObjSmall-v0 small_base_seed100
-# eval_diags_online 2604660 003000 BabyAI-CustomGoToObjMedium-v0 beforeafter_base_seed1
-# eval_diags_online 2607640 007000 BabyAI-CustomGoToObjMedium-v0 beforeafter_base_seed42
-# eval_diags_online 2607638 007100 BabyAI-CustomGoToObjMedium-v0 beforeafter_base_seed100
 # eval_diags_online 2604665 002300 BabyAI-CustomGoToObjAndOr-v0 andor_base_seed1
 # eval_diags_online 2607635 006900 BabyAI-CustomGoToObjAndOr-v0 andor_base_seed42
 # eval_diags_online 2607636 006800 BabyAI-CustomGoToObjAndOr-v0 andor_base_seed100
+
+eval_diags_online 2669860 014000 BabyAI-CustomGoToObjMedium-v0 beforeafter_base_seed1
+eval_diags_online 2669861 014000 BabyAI-CustomGoToObjMedium-v0 beforeafter_base_seed42
+eval_diags_online 2669862 014000 BabyAI-CustomGoToObjMedium-v0 beforeafter_base_seed100
+eval_diags_online 2689034 025000 BabyAI-CustomGoToObjMedium-v0 beforeafter_new_seed1
+eval_diags_online 2689035 025000 BabyAI-CustomGoToObjMedium-v0 beforeafter_new_seed42
+eval_diags_online 2689036 025000 BabyAI-CustomGoToObjMedium-v0 beforeafter_new_seed100

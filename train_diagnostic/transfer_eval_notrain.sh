@@ -61,29 +61,29 @@ if [ "$LEVEL" == 'small' ]; then
 elif [ "$LEVEL" == "beforeafter" ]; then
     # Medium level (Beforeafter)
     echo "Beforeafter"
-    transfer_eval 2604660 003000 21 BabyAI-TransferGoToObjBeforeAfter0-v0 base_beforeafter_1_color
-    transfer_eval 2607640 007000 21 BabyAI-TransferGoToObjBeforeAfter0-v0 base_beforeafter_42_color
-    transfer_eval 2607638 007100 21 BabyAI-TransferGoToObjBeforeAfter0-v0 base_beforeafter_100_color
+    transfer_eval 2669860 014000 21 BabyAI-TransferGoToObjBeforeAfter0-v0 base_beforeafter_1_color
+    transfer_eval 2669861 014000 21 BabyAI-TransferGoToObjBeforeAfter0-v0 base_beforeafter_42_color
+    transfer_eval 2669862 014000 21 BabyAI-TransferGoToObjBeforeAfter0-v0 base_beforeafter_100_color
 
-    transfer_eval 2604660 003000 24 BabyAI-TransferGoToObjBeforeAfter1-v0 base_beforeafter_1_obj
-    transfer_eval 2607640 007000 24 BabyAI-TransferGoToObjBeforeAfter1-v0 base_beforeafter_42_obj
-    transfer_eval 2607638 007100 24 BabyAI-TransferGoToObjBeforeAfter1-v0 base_beforeafter_100_obj
+    transfer_eval 2669860 014000 24 BabyAI-TransferGoToObjBeforeAfter1-v0 base_beforeafter_1_obj
+    transfer_eval 2669861 014000 24 BabyAI-TransferGoToObjBeforeAfter1-v0 base_beforeafter_42_obj
+    transfer_eval 2669862 014000 24 BabyAI-TransferGoToObjBeforeAfter1-v0 base_beforeafter_100_obj
 
-    transfer_eval 2604660 003000 28 BabyAI-TransferGoToObjBeforeAfter2-v0 base_beforeafter_1_colobj
-    transfer_eval 2607640 007000 28 BabyAI-TransferGoToObjBeforeAfter2-v0 base_beforeafter_42_colobj
-    transfer_eval 2607638 007100 28 BabyAI-TransferGoToObjBeforeAfter2-v0 base_beforeafter_100_colobj
+    transfer_eval 2669860 014000 28 BabyAI-TransferGoToObjBeforeAfter2-v0 base_beforeafter_1_colobj
+    transfer_eval 2669861 014000 28 BabyAI-TransferGoToObjBeforeAfter2-v0 base_beforeafter_42_colobj
+    transfer_eval 2669862 014000 28 BabyAI-TransferGoToObjBeforeAfter2-v0 base_beforeafter_100_colobj
 
-    transfer_eval 2604667 005400 21 BabyAI-TransferGoToObjBeforeAfter0-v0 new_beforeafter_1_color
-    transfer_eval 2607675 005600 21 BabyAI-TransferGoToObjBeforeAfter0-v0 new_beforeafter_42_color
-    transfer_eval 2607674 006500 21 BabyAI-TransferGoToObjBeforeAfter0-v0 new_beforeafter_100_color
+    transfer_eval 2689034 025000 21 BabyAI-TransferGoToObjBeforeAfter0-v0 new_beforeafter_1_color
+    transfer_eval 2689035 025000 21 BabyAI-TransferGoToObjBeforeAfter0-v0 new_beforeafter_42_color
+    transfer_eval 2689036 025000 21 BabyAI-TransferGoToObjBeforeAfter0-v0 new_beforeafter_100_color
 
-    transfer_eval 2604667 005400 24 BabyAI-TransferGoToObjBeforeAfter1-v0 new_beforeafter_1_obj
-    transfer_eval 2607675 005600 24 BabyAI-TransferGoToObjBeforeAfter1-v0 new_beforeafter_42_obj
-    transfer_eval 2607674 006500 24 BabyAI-TransferGoToObjBeforeAfter1-v0 new_beforeafter_100_obj
+    transfer_eval 2689034 025000 24 BabyAI-TransferGoToObjBeforeAfter1-v0 new_beforeafter_1_obj
+    transfer_eval 2689035 025000 24 BabyAI-TransferGoToObjBeforeAfter1-v0 new_beforeafter_42_obj
+    transfer_eval 2689036 025000 24 BabyAI-TransferGoToObjBeforeAfter1-v0 new_beforeafter_100_obj
 
-    transfer_eval 2604667 005400 28 BabyAI-TransferGoToObjBeforeAfter2-v0 new_beforeafter_1_colobj
-    transfer_eval 2607675 005600 28 BabyAI-TransferGoToObjBeforeAfter2-v0 new_beforeafter_42_colobj
-    transfer_eval 2607674 006500 28 BabyAI-TransferGoToObjBeforeAfter2-v0 new_beforeafter_100_colobj
+    transfer_eval 2689034 025000 28 BabyAI-TransferGoToObjBeforeAfter2-v0 new_beforeafter_1_colobj
+    transfer_eval 2689035 025000 28 BabyAI-TransferGoToObjBeforeAfter2-v0 new_beforeafter_42_colobj
+    transfer_eval 2689036 025000 28 BabyAI-TransferGoToObjBeforeAfter2-v0 new_beforeafter_100_colobj
 elif [ "$LEVEL" == "andor" ]; then
     # AndOr level
     echo "andor"
