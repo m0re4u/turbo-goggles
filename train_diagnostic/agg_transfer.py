@@ -103,23 +103,27 @@ def agg_diag(rl_filename, train_filename, eval_filename):
 
 
 def main(args):
+    if args.lisa:
+        prefix = 'lisa_'
+    else:
+        prefix = ''
     fnames = []
     if args.table == 'base':
         # Aggregate results from other base performances as well:
         # - eval_diags
         # - train_diags
 
-        agg_diag(f'create_datasets_{args.episodes}.log', f'train_diags_{args.epochs}.log', f'eval_diags_{args.episodes}.log')
-        fnames = [f'create_datasets_{args.episodes}.log']
+        agg_diag(f'{prefix}create_datasets_{args.episodes}.log', f'{prefix}train_diags_{args.epochs}.log', f'{prefix}eval_diags_{args.episodes}.log')
+        fnames = [f'{prefix}create_datasets_{args.episodes}.log']
     elif args.table == 'zero':
         for lvlname in LVLS:
-            fname = f'transfer_eval_{args.episodes}_{lvlname}.log'
+            fname = f'{prefix}transfer_eval_{args.episodes}_{lvlname}.log'
             if not os.path.exists(fname):
                 continue
             fnames.append(fname)
     elif args.table == 'trained_transfer':
         for lvlname in LVLS:
-            fname = f'trained_transfer_eval_{args.episodes}_{lvlname}.log'
+            fname = f'{prefix}trained_transfer_eval_{args.episodes}_{lvlname}.log'
             if not os.path.exists(fname):
                 continue
             fnames.append(fname)
@@ -139,6 +143,7 @@ if __name__ == "__main__":
     parser.add_argument("--table", default=None, help="Table name")
     parser.add_argument("--episodes",type=int, default=100, help="Number of episodes that were evaluated")
     parser.add_argument("--epochs",type=int, default=10, help="Number of epochs that the diagnostic classifiers were trained with")
+    parser.add_argument("--lisa",default=False, action='store_true', help="Aggregate results from lisa files")
     args = parser.parse_args()
     if args.table is None or args.table not in TABLES:
         print("Specify a (correct) table name to aggregate results for!")
