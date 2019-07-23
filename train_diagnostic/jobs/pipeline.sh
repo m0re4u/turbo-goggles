@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -N 1
 #SBATCH -p gpu_shared
-#SBATCH -t 2:00:00
+#SBATCH -t 3:00:00
 #SBATCH --mem=12GB
 
 #SBATCH --mail-type=END
@@ -15,4 +15,10 @@ module load CUDA/9.0.176
 pushd ${HOME}/turbo-goggles/train_diagnostic/
 
 # Run training
-./transfer_eval_notrain.sh 100 and
+./create_datasets.sh
+
+# Train diagnostic classifiers
+./train_diags.sh
+
+# Evaluate diagnostic classifiers
+./eval_diags.sh

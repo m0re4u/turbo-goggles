@@ -84,30 +84,30 @@ elif [ "$LEVEL" == "beforeafter" ]; then
     transfer_eval 2689034 025000 28 BabyAI-TransferGoToObjBeforeAfter2-v0 new_beforeafter_1_colobj
     transfer_eval 2689035 025000 28 BabyAI-TransferGoToObjBeforeAfter2-v0 new_beforeafter_42_colobj
     transfer_eval 2689036 025000 28 BabyAI-TransferGoToObjBeforeAfter2-v0 new_beforeafter_100_colobj
-elif [ "$LEVEL" == "andor" ]; then
-    # AndOr level
-    echo "andor"
-    transfer_eval 2604665 002300 21 BabyAI-TransferGoToObjAndOr0-v0 base_andor_1_color
-    transfer_eval 2607635 006900 21 BabyAI-TransferGoToObjAndOr0-v0 base_andor_42_color
-    transfer_eval 2607636 006800 21 BabyAI-TransferGoToObjAndOr0-v0 base_andor_100_color
+elif [ "$LEVEL" == "and" ]; then
+    # And level
+    echo "And"
+    transfer_eval 2709216 010000 21 BabyAI-TransferGoToObjAnd0-v0 base_and_1_color
+    transfer_eval 2709217 010000 21 BabyAI-TransferGoToObjAnd0-v0 base_and_42_color
+    transfer_eval 2709218 010000 21 BabyAI-TransferGoToObjAnd0-v0 base_and_100_color
 
-    transfer_eval 2604665 002300 24 BabyAI-TransferGoToObjAndOr1-v0 base_andor_1_obj
-    transfer_eval 2607635 006900 24 BabyAI-TransferGoToObjAndOr1-v0 base_andor_42_obj
-    transfer_eval 2607636 006800 24 BabyAI-TransferGoToObjAndOr1-v0 base_andor_100_obj
+    transfer_eval 2709216 010000 24 BabyAI-TransferGoToObjAnd1-v0 base_and_1_obj
+    transfer_eval 2709217 010000 24 BabyAI-TransferGoToObjAnd1-v0 base_and_42_obj
+    transfer_eval 2709218 010000 24 BabyAI-TransferGoToObjAnd1-v0 base_and_100_obj
 
-    transfer_eval 2604665 002300 28 BabyAI-TransferGoToObjAndOr2-v0 base_andor_1_colobj
-    transfer_eval 2607635 006900 28 BabyAI-TransferGoToObjAndOr2-v0 base_andor_42_colobj
-    transfer_eval 2607636 006800 28 BabyAI-TransferGoToObjAndOr2-v0 base_andor_100_colobj
+    transfer_eval 2709216 010000 28 BabyAI-TransferGoToObjAnd2-v0 base_and_1_colobj
+    transfer_eval 2709217 010000 28 BabyAI-TransferGoToObjAnd2-v0 base_and_42_colobj
+    transfer_eval 2709218 010000 28 BabyAI-TransferGoToObjAnd2-v0 base_and_100_colobj
 
-    transfer_eval 2604666 005900 21 BabyAI-TransferGoToObjAndOr0-v0 new_andor_1_color
-    transfer_eval 2607672 005400 21 BabyAI-TransferGoToObjAndOr0-v0 new_andor_42_color
-    transfer_eval 2607673 006200 21 BabyAI-TransferGoToObjAndOr0-v0 new_andor_100_color
+    transfer_eval 2691623 010000 21 BabyAI-TransferGoToObjAnd0-v0 new_and_1_color
+    transfer_eval 2691624 010000 21 BabyAI-TransferGoToObjAnd0-v0 new_and_42_color
+    transfer_eval 2691625 010000 21 BabyAI-TransferGoToObjAnd0-v0 new_and_100_color
 
-    transfer_eval 2604666 005900 24 BabyAI-TransferGoToObjAndOr1-v0 new_andor_1_obj
-    transfer_eval 2607672 005400 24 BabyAI-TransferGoToObjAndOr1-v0 new_andor_42_obj
-    transfer_eval 2607673 006200 24 BabyAI-TransferGoToObjAndOr1-v0 new_andor_100_obj
+    transfer_eval 2691623 010000 24 BabyAI-TransferGoToObjAnd1-v0 new_and_1_obj
+    transfer_eval 2691624 010000 24 BabyAI-TransferGoToObjAnd1-v0 new_and_42_obj
+    transfer_eval 2691625 010000 24 BabyAI-TransferGoToObjAnd1-v0 new_and_100_obj
 
-    transfer_eval 2604666 005900 28 BabyAI-TransferGoToObjAndOr2-v0 new_andor_1_colobj
-    transfer_eval 2607672 005400 28 BabyAI-TransferGoToObjAndOr2-v0 new_andor_42_colobj
-    transfer_eval 2607673 006200 28 BabyAI-TransferGoToObjAndOr2-v0 new_andor_100_colobj
+    transfer_eval 2691623 010000 28 BabyAI-TransferGoToObjAnd2-v0 new_and_1_colobj
+    transfer_eval 2691624 010000 28 BabyAI-TransferGoToObjAnd2-v0 new_and_42_colobj
+    transfer_eval 2691625 010000 28 BabyAI-TransferGoToObjAnd2-v0 new_and_100_colobj
 fi

@@ -110,7 +110,6 @@ def main(args):
         # - train_diags
 
         agg_diag(f'create_datasets_{args.episodes}.log', f'train_diags_{args.epochs}.log', f'eval_diags_{args.episodes}.log')
-        exit()
         fnames = [f'create_datasets_{args.episodes}.log']
     elif args.table == 'zero':
         for lvlname in LVLS:

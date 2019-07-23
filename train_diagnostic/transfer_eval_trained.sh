@@ -74,25 +74,25 @@ elif [ "$LEVEL" == "beforeafter" ]; then
     transfer_eval 2644989 000100 21 BabyAI-TransferGoToObjBeforeAfter0-v0 train_new_beforeafter_100_color 2607674
     transfer_eval 2644995 000100 24 BabyAI-TransferGoToObjBeforeAfter1-v0 train_new_beforeafter_100_obj 2607674
     transfer_eval 2645001 000100 28 BabyAI-TransferGoToObjBeforeAfter2-v0 train_new_beforeafter_100_colobj 2607674
-elif [ "$LEVEL" == "andor" ]; then
-    # AndOr level
-    echo "andor"
-    transfer_eval 2645227 000100 21 BabyAI-TransferGoToObjAndOr0-v0 train_base_andor_1_color 2604665
-    transfer_eval 2645233 000100 24 BabyAI-TransferGoToObjAndOr1-v0 train_base_andor_1_obj 2604665
-    transfer_eval 2645239 000100 28 BabyAI-TransferGoToObjAndOr2-v0 train_base_andor_1_colobj 2604665
-    transfer_eval 2645226 000100 21 BabyAI-TransferGoToObjAndOr0-v0 train_base_andor_42_color 2607635
-    transfer_eval 2645232 000100 24 BabyAI-TransferGoToObjAndOr1-v0 train_base_andor_42_obj 2607635
-    transfer_eval 2645238 000100 28 BabyAI-TransferGoToObjAndOr2-v0 train_base_andor_42_colobj 2607635
-    transfer_eval 2645225 000100 21 BabyAI-TransferGoToObjAndOr0-v0 train_base_andor_100_color 2607636
-    transfer_eval 2645231 000100 24 BabyAI-TransferGoToObjAndOr1-v0 train_base_andor_100_obj 2607636
-    transfer_eval 2645237 000100 28 BabyAI-TransferGoToObjAndOr2-v0 train_base_andor_100_colobj 2607636
-    transfer_eval 2645230 000100 21 BabyAI-TransferGoToObjAndOr0-v0 train_new_andor_1_color 2604666
-    transfer_eval 2645236 000100 24 BabyAI-TransferGoToObjAndOr1-v0 train_new_andor_1_obj 2604666
-    transfer_eval 2645242 000100 28 BabyAI-TransferGoToObjAndOr2-v0 train_new_andor_1_colobj 2604666
-    transfer_eval 2645229 000100 21 BabyAI-TransferGoToObjAndOr0-v0 train_new_andor_42_color 2607672
-    transfer_eval 2645235 000100 24 BabyAI-TransferGoToObjAndOr1-v0 train_new_andor_42_obj 2607672
-    transfer_eval 2645241 000100 28 BabyAI-TransferGoToObjAndOr2-v0 train_new_andor_42_colobj 2607672
-    transfer_eval 2645228 000100 21 BabyAI-TransferGoToObjAndOr0-v0 train_new_andor_100_color 2607673
-    transfer_eval 2645234 000100 24 BabyAI-TransferGoToObjAndOr1-v0 train_new_andor_100_obj 2607673
-    transfer_eval 2645240 000100 28 BabyAI-TransferGoToObjAndOr2-v0 train_new_andor_100_colobj 2607673
+elif [ "$LEVEL" == "and" ]; then
+    # And level
+    echo "And"
+    transfer_eval 2645227 000100 21 BabyAI-TransferGoToObjAnd0-v0 train_base_and_1_color 2709216
+    transfer_eval 2645233 000100 24 BabyAI-TransferGoToObjAnd1-v0 train_base_and_1_obj 2709216
+    transfer_eval 2645239 000100 28 BabyAI-TransferGoToObjAnd2-v0 train_base_and_1_colobj 2709216
+    transfer_eval 2645226 000100 21 BabyAI-TransferGoToObjAnd0-v0 train_base_and_42_color 2709217
+    transfer_eval 2645232 000100 24 BabyAI-TransferGoToObjAnd1-v0 train_base_and_42_obj 2709217
+    transfer_eval 2645238 000100 28 BabyAI-TransferGoToObjAnd2-v0 train_base_and_42_colobj 2709217
+    transfer_eval 2645225 000100 21 BabyAI-TransferGoToObjAnd0-v0 train_base_and_100_color 2709218
+    transfer_eval 2645231 000100 24 BabyAI-TransferGoToObjAnd1-v0 train_base_and_100_obj 2709218
+    transfer_eval 2645237 000100 28 BabyAI-TransferGoToObjAnd2-v0 train_base_and_100_colobj 2709218
+    transfer_eval 2645230 000100 21 BabyAI-TransferGoToObjAnd0-v0 train_new_and_1_color 2691623
+    transfer_eval 2645236 000100 24 BabyAI-TransferGoToObjAnd1-v0 train_new_and_1_obj 2691623
+    transfer_eval 2645242 000100 28 BabyAI-TransferGoToObjAnd2-v0 train_new_and_1_colobj 2691623
+    transfer_eval 2645229 000100 21 BabyAI-TransferGoToObjAnd0-v0 train_new_and_42_color 2691624
+    transfer_eval 2645235 000100 24 BabyAI-TransferGoToObjAnd1-v0 train_new_and_42_obj 2691624
+    transfer_eval 2645241 000100 28 BabyAI-TransferGoToObjAnd2-v0 train_new_and_42_colobj 2691624
+    transfer_eval 2645228 000100 21 BabyAI-TransferGoToObjAnd0-v0 train_new_and_100_color 2691625
+    transfer_eval 2645234 000100 24 BabyAI-TransferGoToObjAnd1-v0 train_new_and_100_obj 2691625
+    transfer_eval 2645240 000100 28 BabyAI-TransferGoToObjAnd2-v0 train_new_and_100_colobj 2691625
 fi
