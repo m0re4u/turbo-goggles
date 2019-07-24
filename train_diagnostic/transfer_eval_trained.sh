@@ -56,24 +56,24 @@ if [ $LEVEL == 'small' ]; then
 elif [ "$LEVEL" == "beforeafter" ]; then
     # Medium level (Beforeafter)
     echo "Beforeafter"
-    transfer_eval 2733351 000400 21 BabyAI-TransferGoToObjBeforeAfter0-v0 train_base_beforeafter_1_color 2669860
-    transfer_eval 2733357 000400 24 BabyAI-TransferGoToObjBeforeAfter1-v0 train_base_beforeafter_1_obj 2669860
-    transfer_eval 2733363 000400 28 BabyAI-TransferGoToObjBeforeAfter2-v0 train_base_beforeafter_1_colobj 2669860
-    transfer_eval 2733350 000400 21 BabyAI-TransferGoToObjBeforeAfter0-v0 train_base_beforeafter_42_color 2669861
-    transfer_eval 2733356 000400 24 BabyAI-TransferGoToObjBeforeAfter1-v0 train_base_beforeafter_42_obj 2669861
-    transfer_eval 2733362 000400 28 BabyAI-TransferGoToObjBeforeAfter2-v0 train_base_beforeafter_42_colobj 2669861
-    transfer_eval 2733349 000400 21 BabyAI-TransferGoToObjBeforeAfter0-v0 train_base_beforeafter_100_color 2669862
-    transfer_eval 2733355 000400 24 BabyAI-TransferGoToObjBeforeAfter1-v0 train_base_beforeafter_100_obj 2669862
-    transfer_eval 2733361 000400 28 BabyAI-TransferGoToObjBeforeAfter2-v0 train_base_beforeafter_100_colobj 2669862
-    transfer_eval 2733944 000800 21 BabyAI-TransferGoToObjBeforeAfter0-v0 train_new_beforeafter_1_color 2689034
-    transfer_eval 2733947 000800 24 BabyAI-TransferGoToObjBeforeAfter1-v0 train_new_beforeafter_1_obj 2689034
-    transfer_eval 2733950 000800 28 BabyAI-TransferGoToObjBeforeAfter2-v0 train_new_beforeafter_1_colobj 2689034
-    transfer_eval 2733943 000800 21 BabyAI-TransferGoToObjBeforeAfter0-v0 train_new_beforeafter_42_color 2689035
-    transfer_eval 2733946 000800 24 BabyAI-TransferGoToObjBeforeAfter1-v0 train_new_beforeafter_42_obj 2689035
-    transfer_eval 2733949 000800 28 BabyAI-TransferGoToObjBeforeAfter2-v0 train_new_beforeafter_42_colobj 2689035
-    transfer_eval 2733942 000800 21 BabyAI-TransferGoToObjBeforeAfter0-v0 train_new_beforeafter_100_color 2689036
-    transfer_eval 2733945 000800 24 BabyAI-TransferGoToObjBeforeAfter1-v0 train_new_beforeafter_100_obj 2689036
-    transfer_eval 2733948 000800 28 BabyAI-TransferGoToObjBeforeAfter2-v0 train_new_beforeafter_100_colobj 2689036
+    transfer_eval 2733351 000300 21 BabyAI-TransferGoToObjBeforeAfter0-v0 train_base_beforeafter_1_color 2669860
+    transfer_eval 2733357 000300 24 BabyAI-TransferGoToObjBeforeAfter1-v0 train_base_beforeafter_1_obj 2669860
+    transfer_eval 2733363 000300 28 BabyAI-TransferGoToObjBeforeAfter2-v0 train_base_beforeafter_1_colobj 2669860
+    transfer_eval 2733350 000300 21 BabyAI-TransferGoToObjBeforeAfter0-v0 train_base_beforeafter_42_color 2669861
+    transfer_eval 2733356 000300 24 BabyAI-TransferGoToObjBeforeAfter1-v0 train_base_beforeafter_42_obj 2669861
+    transfer_eval 2733362 000300 28 BabyAI-TransferGoToObjBeforeAfter2-v0 train_base_beforeafter_42_colobj 2669861
+    transfer_eval 2733349 000300 21 BabyAI-TransferGoToObjBeforeAfter0-v0 train_base_beforeafter_100_color 2669862
+    transfer_eval 2733355 000300 24 BabyAI-TransferGoToObjBeforeAfter1-v0 train_base_beforeafter_100_obj 2669862
+    transfer_eval 2733361 000300 28 BabyAI-TransferGoToObjBeforeAfter2-v0 train_base_beforeafter_100_colobj 2669862
+    transfer_eval 2733944 000500 21 BabyAI-TransferGoToObjBeforeAfter0-v0 train_new_beforeafter_1_color 2689034
+    transfer_eval 2733947 000500 24 BabyAI-TransferGoToObjBeforeAfter1-v0 train_new_beforeafter_1_obj 2689034
+    transfer_eval 2733950 000500 28 BabyAI-TransferGoToObjBeforeAfter2-v0 train_new_beforeafter_1_colobj 2689034
+    transfer_eval 2733943 000500 21 BabyAI-TransferGoToObjBeforeAfter0-v0 train_new_beforeafter_42_color 2689035
+    transfer_eval 2733946 000500 24 BabyAI-TransferGoToObjBeforeAfter1-v0 train_new_beforeafter_42_obj 2689035
+    transfer_eval 2733949 000500 28 BabyAI-TransferGoToObjBeforeAfter2-v0 train_new_beforeafter_42_colobj 2689035
+    transfer_eval 2733942 000500 21 BabyAI-TransferGoToObjBeforeAfter0-v0 train_new_beforeafter_100_color 2689036
+    transfer_eval 2733945 000500 24 BabyAI-TransferGoToObjBeforeAfter1-v0 train_new_beforeafter_100_obj 2689036
+    transfer_eval 2733948 000500 28 BabyAI-TransferGoToObjBeforeAfter2-v0 train_new_beforeafter_100_colobj 2689036
 elif [ "$LEVEL" == "and" ]; then
     # And level
     echo "And"
