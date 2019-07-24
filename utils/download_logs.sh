@@ -30,7 +30,10 @@ train_diags_10.log
 eval_diags_100.log
 transfer_eval_100_small.log
 transfer_eval_100_and.log
-transfer_eval_100_beforeafter.log"
+transfer_eval_100_beforeafter.log
+trained_transfer_eval_100_small.log
+trained_transfer_eval_100_beforeafter.log
+trained_transfer_eval_100_and.log"
 
 for f in $FILES; do
     scp $SSH_ARGS $LISA_USERNAME@$LISA_HOSTNAME:$LISA_LOGS_PATH/$f lisa_$f

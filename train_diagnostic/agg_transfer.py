@@ -22,7 +22,7 @@ def fill_results(filenames, table=None):
         name_idx = [1,0,3]
     elif table == 'trained_transfer':
         model_generator = product(LVLS, MODELS, TMODE)
-        name_idx = [0,1,3]
+        name_idx = [2,1,4]
     else:
         print("Unknown table, exiting")
         exit(1)
@@ -124,10 +124,9 @@ def main(args):
     elif args.table == 'trained_transfer':
         for lvlname in LVLS:
             fname = f'{prefix}trained_transfer_eval_{args.episodes}_{lvlname}.log'
-            if not os.path.exists(fname):
-                continue
-            fnames.append(fname)
-
+            print(fname)
+            if os.path.exists(fname):
+                fnames.append(fname)
     # Fill the results from eval_rl
     result_dict = fill_results(fnames, table=args.table)
 
