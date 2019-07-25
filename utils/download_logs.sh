@@ -9,7 +9,7 @@ function print_error {
 }
 trap print_error ERR
 
-SSH_ARGS="-o LogLevel=error"
+SSH_ARGS="-o LogLevel=error -q"
 LISA_LOGS_PATH="turbo-goggles/train_diagnostic/"
 LISA_HOSTNAME="lisa.surfsara.nl"
 
@@ -36,6 +36,11 @@ trained_transfer_eval_100_beforeafter.log
 trained_transfer_eval_100_and.log"
 
 for f in $FILES; do
-    scp $SSH_ARGS $LISA_USERNAME@$LISA_HOSTNAME:$LISA_LOGS_PATH/$f lisa_$f
-    sed -i '/no display found. Using non-interactive Agg backend/d' lisa_$f
+
+    if ssh -q $LISA_USERNAME@$LISA_HOSTNAME [[ -f $LISA_LOGS_PATH/$f ]]; then
+        scp $SSH_ARGS $LISA_USERNAME@$LISA_HOSTNAME:$LISA_LOGS_PATH/$f lisa_$f
+        sed -i '/no display found. Using non-interactive Agg backend/d' lisa_$f
+    else
+        echo Missing $f on remote, skipping..
+    fi
 done

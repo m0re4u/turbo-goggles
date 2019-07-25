@@ -99,15 +99,15 @@ elif [ "$LEVEL" == "and" ]; then
     transfer_eval 2709217 010000 28 BabyAI-TransferGoToObjAnd2-v0 base_and_42_colobj
     transfer_eval 2709218 010000 28 BabyAI-TransferGoToObjAnd2-v0 base_and_100_colobj
 
-    transfer_eval 2691623 010000 21 BabyAI-TransferGoToObjAnd0-v0 new_and_1_color
-    transfer_eval 2691624 010000 21 BabyAI-TransferGoToObjAnd0-v0 new_and_42_color
+    transfer_eval 2691623 010100 21 BabyAI-TransferGoToObjAnd0-v0 new_and_1_color
+    transfer_eval 2731546 009500 21 BabyAI-TransferGoToObjAnd0-v0 new_and_43_color
     transfer_eval 2691625 010000 21 BabyAI-TransferGoToObjAnd0-v0 new_and_100_color
 
-    transfer_eval 2691623 010000 24 BabyAI-TransferGoToObjAnd1-v0 new_and_1_obj
-    transfer_eval 2691624 010000 24 BabyAI-TransferGoToObjAnd1-v0 new_and_42_obj
+    transfer_eval 2691623 010100 24 BabyAI-TransferGoToObjAnd1-v0 new_and_1_obj
+    transfer_eval 2731546 009500 24 BabyAI-TransferGoToObjAnd1-v0 new_and_43_obj
     transfer_eval 2691625 010000 24 BabyAI-TransferGoToObjAnd1-v0 new_and_100_obj
 
-    transfer_eval 2691623 010000 28 BabyAI-TransferGoToObjAnd2-v0 new_and_1_colobj
-    transfer_eval 2691624 010000 28 BabyAI-TransferGoToObjAnd2-v0 new_and_42_colobj
+    transfer_eval 2691623 010100 28 BabyAI-TransferGoToObjAnd2-v0 new_and_1_colobj
+    transfer_eval 2731546 009500 28 BabyAI-TransferGoToObjAnd2-v0 new_and_43_colobj
     transfer_eval 2691625 010000 28 BabyAI-TransferGoToObjAnd2-v0 new_and_100_colobj
 fi

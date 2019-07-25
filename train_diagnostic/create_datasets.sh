@@ -35,7 +35,7 @@ create_datasets 2709216 010000 BabyAI-CustomGoToObjAnd-v0 and_base_seed1
 create_datasets 2709217 010000 BabyAI-CustomGoToObjAnd-v0 and_base_seed42
 create_datasets 2709218 010000 BabyAI-CustomGoToObjAnd-v0 and_base_seed100
 create_datasets 2691623 010000 BabyAI-CustomGoToObjAnd-v0 and_new_seed1
-# create_datasets 2691624 010000 BabyAI-CustomGoToObjAnd-v0 and_new_seed42
+create_datasets 2731546 009500 BabyAI-CustomGoToObjAnd-v0 and_new_seed43
 create_datasets 2691625 010000 BabyAI-CustomGoToObjAnd-v0 and_new_seed100
 
 create_datasets 2669860 014000 BabyAI-CustomGoToObjMedium-v0 beforeafter_base_seed1
