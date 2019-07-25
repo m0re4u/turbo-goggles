@@ -124,7 +124,6 @@ def main(args):
     elif args.table == 'trained_transfer':
         for lvlname in LVLS:
             fname = f'{prefix}trained_transfer_eval_{args.episodes}_{lvlname}.log'
-            print(fname)
             if os.path.exists(fname):
                 fnames.append(fname)
     # Fill the results from eval_rl

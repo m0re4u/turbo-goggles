@@ -77,22 +77,22 @@ elif [ "$LEVEL" == "beforeafter" ]; then
 elif [ "$LEVEL" == "and" ]; then
     # And level
     echo "And"
-    transfer_eval 2645227 000400 21 BabyAI-TransferGoToObjAnd0-v0 train_base_and_1_color 2709216
-    transfer_eval 2645233 000400 24 BabyAI-TransferGoToObjAnd1-v0 train_base_and_1_obj 2709216
-    transfer_eval 2645239 000400 28 BabyAI-TransferGoToObjAnd2-v0 train_base_and_1_colobj 2709216
-    transfer_eval 2645226 000400 21 BabyAI-TransferGoToObjAnd0-v0 train_base_and_42_color 2709217
-    transfer_eval 2645232 000400 24 BabyAI-TransferGoToObjAnd1-v0 train_base_and_42_obj 2709217
-    transfer_eval 2645238 000400 28 BabyAI-TransferGoToObjAnd2-v0 train_base_and_42_colobj 2709217
-    transfer_eval 2645225 000400 21 BabyAI-TransferGoToObjAnd0-v0 train_base_and_100_color 2709218
-    transfer_eval 2645231 000400 24 BabyAI-TransferGoToObjAnd1-v0 train_base_and_100_obj 2709218
-    transfer_eval 2645237 000400 28 BabyAI-TransferGoToObjAnd2-v0 train_base_and_100_colobj 2709218
-    transfer_eval 2645230 000800 21 BabyAI-TransferGoToObjAnd0-v0 train_new_and_1_color 2691623
-    transfer_eval 2645236 000800 24 BabyAI-TransferGoToObjAnd1-v0 train_new_and_1_obj 2691623
-    transfer_eval 2645242 000800 28 BabyAI-TransferGoToObjAnd2-v0 train_new_and_1_colobj 2691623
-    transfer_eval 2645229 000800 21 BabyAI-TransferGoToObjAnd0-v0 train_new_and_42_color 2691624
-    transfer_eval 2645235 000800 24 BabyAI-TransferGoToObjAnd1-v0 train_new_and_42_obj 2691624
-    transfer_eval 2645241 000800 28 BabyAI-TransferGoToObjAnd2-v0 train_new_and_42_colobj 2691624
-    transfer_eval 2645228 000800 21 BabyAI-TransferGoToObjAnd0-v0 train_new_and_100_color 2691625
-    transfer_eval 2645234 000800 24 BabyAI-TransferGoToObjAnd1-v0 train_new_and_100_obj 2691625
-    transfer_eval 2645240 000800 28 BabyAI-TransferGoToObjAnd2-v0 train_new_and_100_colobj 2691625
+    transfer_eval 2733953 000400 21 BabyAI-TransferGoToObjAnd0-v0 train_base_and_1_color 2709216
+    transfer_eval 2733959 000400 24 BabyAI-TransferGoToObjAnd1-v0 train_base_and_1_obj 2709216
+    transfer_eval 2733965 000400 28 BabyAI-TransferGoToObjAnd2-v0 train_base_and_1_colobj 2709216
+    transfer_eval 2733952 000400 21 BabyAI-TransferGoToObjAnd0-v0 train_base_and_42_color 2709217
+    transfer_eval 2733958 000400 24 BabyAI-TransferGoToObjAnd1-v0 train_base_and_42_obj 2709217
+    transfer_eval 2733964 000400 28 BabyAI-TransferGoToObjAnd2-v0 train_base_and_42_colobj 2709217
+    transfer_eval 2733951 000400 21 BabyAI-TransferGoToObjAnd0-v0 train_base_and_100_color 2709218
+    transfer_eval 2733957 000400 24 BabyAI-TransferGoToObjAnd1-v0 train_base_and_100_obj 2709218
+    transfer_eval 2733963 000400 28 BabyAI-TransferGoToObjAnd2-v0 train_base_and_100_colobj 2709218
+    transfer_eval 2733956 000400 21 BabyAI-TransferGoToObjAnd0-v0 train_new_and_1_color 2691623
+    transfer_eval 2733962 000400 24 BabyAI-TransferGoToObjAnd1-v0 train_new_and_1_obj 2691623
+    transfer_eval 2733968 000400 28 BabyAI-TransferGoToObjAnd2-v0 train_new_and_1_colobj 2691623
+    transfer_eval 2741742 000400 21 BabyAI-TransferGoToObjAnd0-v0 train_new_and_42_color 2691624
+    transfer_eval 2741743 000400 24 BabyAI-TransferGoToObjAnd1-v0 train_new_and_42_obj 2691624
+    transfer_eval 2741744 000400 28 BabyAI-TransferGoToObjAnd2-v0 train_new_and_42_colobj 2691624
+    transfer_eval 2733954 000400 21 BabyAI-TransferGoToObjAnd0-v0 train_new_and_100_color 2691625
+    transfer_eval 2733960 000400 24 BabyAI-TransferGoToObjAnd1-v0 train_new_and_100_obj 2691625
+    transfer_eval 2733966 000400 28 BabyAI-TransferGoToObjAnd2-v0 train_new_and_100_colobj 2691625
 fi
