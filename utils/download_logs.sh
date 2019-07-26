@@ -1,6 +1,6 @@
 #! /bin/bash
 
-set -eu -o pipefail
+set -eu
 
 function print_error {
     read line file <<<$(caller)
