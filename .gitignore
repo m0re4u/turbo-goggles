@@ -105,22 +105,26 @@ venv.bak/
 
 .pdf
 .gv
-test-output/
-babyai_treegen/vocab.json
 .log
+.pt
+.out
+.csv
+.npy
+
+test-output/
+
+babyai_treegen/vocab.json
+
 plotting/data
 plotting/results
+
 utils/data
 utils/results
 
-train_diagnostic/reason_dataset
-train_diagnostic/big_reason_dataset
-train_diagnostic/reason_dataset*
 train_diagnostic/data
+train_diagnostic/confusions
+train_diagnostic/diags
+
 train_diagnostic/test.py
 train_diagnostic/read.py
 train_diagnostic/combine_data.sh
-*.pt
-*.out
-*.csv
-*.npy
