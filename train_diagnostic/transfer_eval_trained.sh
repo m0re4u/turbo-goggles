@@ -33,7 +33,7 @@ rm -f trained_transfer_eval_"$EPISODES"_$LEVEL.log
 touch trained_transfer_eval_"$EPISODES"_$LEVEL.log
 
 
-if [ $INVERT == 'yes']; then
+if [ $INVERT == 'yes' ]; then
     echo "invert"
     if [ "$LEVEL" == "beforeafter" ]; then
         # Medium level (Beforeafter)
