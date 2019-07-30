@@ -107,7 +107,7 @@ venv.bak/
 .gv
 .log
 *.pt
-.out
+*.out
 .csv
 *.npy
 
@@ -124,6 +124,7 @@ utils/results
 train_diagnostic/data
 train_diagnostic/confusions
 train_diagnostic/diags
+train_diagnostic/outs
 
 train_diagnostic/test.py
 train_diagnostic/read.py
