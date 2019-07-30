@@ -23,14 +23,14 @@ function transfer_eval {
         --diag_targets $3 \
         --machine \
         --seed $i \
-        --episodes $EPISODES >> trained_transfer_eval_"$EPISODES"_$LEVEL.log;
-        sed -i '${s/$/'",$5_$i"'/}' "trained_transfer_eval_"$EPISODES"_$LEVEL.log"
+        --episodes $EPISODES >> trained_transfer_eval_"$EPISODES"_$LEVEL_$INVERT.log;
+        sed -i '${s/$/'",$5_$i"'/}' "trained_transfer_eval_"$EPISODES"_$LEVEL_$INVERT.log"
     done
 }
 
 
-rm -f trained_transfer_eval_"$EPISODES"_$LEVEL.log
-touch trained_transfer_eval_"$EPISODES"_$LEVEL.log
+rm -f trained_transfer_eval_"$EPISODES"_$LEVEL_$INVERT.log
+touch trained_transfer_eval_"$EPISODES"_$LEVEL_$INVERT.log
 
 
 if [ $INVERT == 'yes' ]; then
@@ -78,6 +78,10 @@ if [ $INVERT == 'yes' ]; then
         transfer_eval 2733954 000400 21 BabyAI-TransferGoToObjAnd0-v0 invtrain_new_and_100_color 2691625
         transfer_eval 2733960 000400 24 BabyAI-TransferGoToObjAnd1-v0 invtrain_new_and_100_obj 2691625
         transfer_eval 2733966 000400 28 BabyAI-TransferGoToObjAnd2-v0 invtrain_new_and_100_colobj 2691625
+    elif [ "$LEVEL" == "small" ]; then
+        # Small level
+        echo "Small"
+        # TODO
     fi
 else
     echo "no invert"

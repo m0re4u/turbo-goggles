@@ -54,3 +54,32 @@ python3 average_data.py 2645236 2645235 2645234 --outfile "new andor 1" --sr
 
 python3 average_data.py 2645242 2645241 2645240 --outfile "new andor 2"
 python3 average_data.py 2645242 2645241 2645240 --outfile "new andor 2" --sr
+
+# Trained transfer BeforeAfter (BA)
+python3 average_data.py 2733351 2733350 2733349 --outfile "BA 0 no base"
+python3 average_data.py 2733351 2733350 2733349 --outfile "BA 0 no base" --sr
+python3 average_data.py 2733357 2733356 2733355 --outfile "BA 1 no base"
+python3 average_data.py 2733357 2733356 2733355 --outfile "BA 1 no base" --sr
+python3 average_data.py 2733363 2733362 2733361 --outfile "BA 2 no base"
+python3 average_data.py 2733363 2733362 2733361 --outfile "BA 2 no base" --sr
+
+python3 average_data.py 2766050 2766049 2766048 --outfile "BA 0 yes base"
+python3 average_data.py 2766050 2766049 2766048 --outfile "BA 0 yes base" --sr
+python3 average_data.py 2766053 2766052 2766051 --outfile "BA 1 yes base"
+python3 average_data.py 2766053 2766052 2766051 --outfile "BA 1 yes base" --sr
+python3 average_data.py 2766056 2766055 2766054 --outfile "BA 2 yes base"
+python3 average_data.py 2766056 2766055 2766054 --outfile "BA 2 yes base" --sr
+
+python3 average_data.py 2733944 2733943 2733942 --outfile "BA 0 no new"
+python3 average_data.py 2733944 2733943 2733942 --outfile "BA 0 no new" --sr
+python3 average_data.py 2733947 2733946 2733945 --outfile "BA 1 no new"
+python3 average_data.py 2733947 2733946 2733945 --outfile "BA 1 no new" --sr
+python3 average_data.py 2733950 2733949 2733948 --outfile "BA 2 no new"
+python3 average_data.py 2733950 2733949 2733948 --outfile "BA 2 no new" --sr
+
+python3 average_data.py 2766060 2766059 2766058 --outfile "BA 0 yes new"
+python3 average_data.py 2766060 2766059 2766058 --outfile "BA 0 yes new" --sr
+python3 average_data.py 2766063 2766062 2766061 --outfile "BA 1 yes new"
+python3 average_data.py 2766063 2766062 2766061 --outfile "BA 1 yes new" --sr
+python3 average_data.py 2766066 2766065 2766064 --outfile "BA 2 yes new"
+python3 average_data.py 2766066 2766065 2766064 --outfile "BA 2 yes new" --sr

@@ -60,6 +60,3 @@ python3 ../../machine/eval_rl.py \
   --vocab ../../machine/models/BabyAI-CustomGoToObjSmall-v0-_PPO_IAC_expert_filmcnn_gru_mem_seed42_job2654157_19-07-15-10-49-39/vocab.json \
   --reasoning model \
   --episodes 5000;
-
-
-  BabyAI-CustomGoToObjSmall-v0-_PPO_IAC_expert_filmcnn_gru_mem_seed1_job2594953_19-06-24-10-46-32

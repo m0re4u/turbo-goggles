@@ -45,7 +45,12 @@ def create_plot(plot, data_dir="data/", result_dir="results/", show=False, mode=
     for i, id in enumerate(plot['ids']):
         file, ylabel = get_data(id, mode, data_dir)
         data = np.loadtxt(file, skiprows=1, delimiter=',')
-        plt.plot(smooth(data[:, -1], plot['smoothing']), label=plot['keys'][i])
+
+        if 'styles' in plot and plot['styles'][i] == 'dashed':
+            dash = [6,2]
+        else:
+            dash = (None, None)
+        plt.plot(smooth(data[:, -1], plot['smoothing']), label=plot['keys'][i],dashes=dash)
     plt.ylabel(ylabel)
     plt.xlabel("Number of training iterations")
     plt.legend()

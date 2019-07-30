@@ -186,6 +186,72 @@
             "xlim":[2000, 10000],
             "ylim":[0, 40],
             "smoothing": 10
+        },
+        {
+            "title": "Trained transfer0 beforeafter",
+            "ids": [
+                "BA_0_no_new_averaged",
+                "BA_0_no_base_averaged",
+                "BA_0_yes_new_averaged",
+                "BA_0_yes_base_averaged"
+            ],
+            "keys": [
+                "no new",
+                "no base",
+                "yes new",
+                "yes base"
+            ],
+            "styles": [
+                "None",
+                "dashed",
+                "None",
+                "dashed"
+            ],
+            "smoothing": 10
+        },
+        {
+            "title": "Trained transfer1 beforeafter",
+            "ids": [
+                "BA_1_no_new_averaged",
+                "BA_1_no_base_averaged",
+                "BA_1_yes_new_averaged",
+                "BA_1_yes_base_averaged"
+            ],
+            "keys": [
+                "no new",
+                "no base",
+                "yes new",
+                "yes base"
+            ],
+            "styles": [
+                "None",
+                "dashed",
+                "None",
+                "dashed"
+            ],
+            "smoothing": 10
+        },
+        {
+            "title": "Trained transfer2 beforeafter",
+            "ids": [
+                "BA_2_no_new_averaged",
+                "BA_2_no_base_averaged",
+                "BA_2_yes_new_averaged",
+                "BA_2_yes_base_averaged"
+            ],
+            "keys": [
+                "no new",
+                "no base",
+                "yes new",
+                "yes base"
+            ],
+            "styles": [
+                "None",
+                "dashed",
+                "None",
+                "dashed"
+            ],
+            "smoothing": 10
         }
     ]
 }
