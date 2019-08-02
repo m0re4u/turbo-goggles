@@ -29,11 +29,16 @@ Required packages:
 
 
 ## Plotting
-GNUplot scripts for visualizing the performance of my models.
+GNUplot scripts for visualizing the performance of my models, and a big python plotter to mass create plots from tensorboard progress.
 
+Required packages:
+- matplotlib
+- numpy
 
 ## Train diagnostic
-Files for training the diagnostic classifier over the hidden state of the ACModel LSTM. Additional functionality include gathering experience for datasets, examining the output of the trained models and online evaluation in the RL setting.
+Files for training the diagnostic classifier over the hidden state of the ACModel LSTM. Additional functionality include gathering experience for datasets, examining the output of the trained models and online evaluation in the RL setting, as well as zero-shot and transfer learning experiments.
+
+Also contains evaluation script for the diagnostic classifier for the creation of a confusion matrix.
 
 Required packages:
 - torch
@@ -48,3 +53,4 @@ Some extra utilities:
 - `average_all.sh` averages data over runs. Uses `average_data.py` to average over `.csv` files.
 - `download_model.sh` downloads models from Lisa using job ids.
 - `download_runs.sh` downloads tensorboard run files from Lisa using job ids.
+- `download_logs.sh` downloads log result files generated from jobs running on Lisa.
