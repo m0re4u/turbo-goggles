@@ -6,7 +6,7 @@ from itertools import product
 from collections import defaultdict
 
 TABLES = ['base', 'zero', 'trained_transfer']
-LVLS = ['small', 'beforeafter', 'and']
+LVLS = ['small', 'beforeafter', 'and', 'sparsesmall', 'sparsebeforeafter','multiple','threes']
 MODELS = ['new', 'base']
 TMODE = ['color', 'obj', 'colobj']
 NSEEDS = [1, 2, 3]
