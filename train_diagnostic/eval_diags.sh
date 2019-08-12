@@ -55,16 +55,16 @@ touch eval_diags_$EPISODES.log
 # eval_diags_online 2786348 022000 BabyAI-CustomGoToObjMedium-v0 sparsebeforeafter_new_seed1
 # eval_diags_online 2786349 022000 BabyAI-CustomGoToObjMedium-v0 sparsebeforeafter_new_seed42
 
-eval_diags_online 2787207 022000 BabyAI-CustomGoToObjMultiple-v0 multiple_base_seed1
-eval_diags_online 2787208 022000 BabyAI-CustomGoToObjMultiple-v0 multiple_base_seed42
-eval_diags_online 2787206 022000 BabyAI-CustomGoToObjMultiple-v0 multiple_base_seed100
-eval_diags_online 2787396 022000 BabyAI-CustomGoToObjMultiple-v0 multiple_new_seed1
-eval_diags_online 2787397 022000 BabyAI-CustomGoToObjMultiple-v0 multiple_new_seed42
-eval_diags_online 2787398 022000 BabyAI-CustomGoToObjMultiple-v0 multiple_new_seed100
+eval_diags_online 2818253 022000 BabyAI-CustomGoToObjMultiple-v0 multiple_base_seed1
+eval_diags_online 2818254 022000 BabyAI-CustomGoToObjMultiple-v0 multiple_base_seed42
+eval_diags_online 2818255 022000 BabyAI-CustomGoToObjMultiple-v0 multiple_base_seed100
+eval_diags_online 2812454 022000 BabyAI-CustomGoToObjMultiple-v0 multiple_new_seed1
+eval_diags_online 2812455 022000 BabyAI-CustomGoToObjMultiple-v0 multiple_new_seed42
+eval_diags_online 2812456 022000 BabyAI-CustomGoToObjMultiple-v0 multiple_new_seed100
 
-eval_diags_online 2787423 025000 BabyAI-CustomGoToObjThrees-v0 threes_base_seed1
-eval_diags_online 2787424 025000 BabyAI-CustomGoToObjThrees-v0 threes_base_seed42
-eval_diags_online 2787422 025000 BabyAI-CustomGoToObjThrees-v0 threes_base_seed100
-eval_diags_online 2787426 025000 BabyAI-CustomGoToObjThrees-v0 threes_new_seed1
-eval_diags_online 2787427 025000 BabyAI-CustomGoToObjThrees-v0 threes_new_seed42
-eval_diags_online 2787425 025000 BabyAI-CustomGoToObjThrees-v0 threes_new_seed100
+eval_diags_online 2818257 025000 BabyAI-CustomGoToObjThrees-v0 threes_base_seed1
+eval_diags_online 2818258 025000 BabyAI-CustomGoToObjThrees-v0 threes_base_seed42
+eval_diags_online 2818260 025000 BabyAI-CustomGoToObjThrees-v0 threes_base_seed100
+eval_diags_online 2812451 025000 BabyAI-CustomGoToObjThrees-v0 threes_new_seed1
+eval_diags_online 2812453 025000 BabyAI-CustomGoToObjThrees-v0 threes_new_seed42
+eval_diags_online 2812452 025000 BabyAI-CustomGoToObjThrees-v0 threes_new_seed100
