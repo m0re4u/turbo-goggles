@@ -1,257 +1,27 @@
 {
     "plots": [
         {
-            "title": "reason - CustomGoToObjSmall",
+            "title": "train curve paper",
             "ids": [
-                "2300034"
+                "small_base_averaged",
+                "small_new_averaged",
+                "ba_base_averaged",
+                "ba_new_averaged"
             ],
             "keys": [
-                "No reasoning"
+                "Baseline small",
+                "Aware small",
+                "Baseline BA",
+                "Aware BA"
             ],
-            "smoothing": 10
-        },
-        {
-            "title": "hidden(detached) - CustomGoToObjSmall",
-            "ids": [
-                "2533555",
-                "2533556",
-                "2501148",
-                "2501149",
-                "2554084",
-                "2554085",
-                "2554086"
-            ],
-            "keys": [
-                "detached 1",
-                "detached 42",
-                "attached 1",
-                "attached 42",
-                "detached 2",
-                "detached 3",
-                "detached 100"
-            ],
-            "smoothing": 10
-        },
-        {
-            "title": "CustomGoToObjMedium",
-            "ids": [
-                "2575696",
-                "2575698"
-            ],
-            "keys": [
-                "detached 1",
-                "detached 42"
-            ],
-            "smoothing": 10
-        },
-        {
-            "title": "UnblockSmall Baseline vs Diagnostic",
-            "ids": [
-                "unblock_base_averaged",
-                "unblock_diagnostic_averaged"
-            ],
-            "keys": [
-                "baseline",
-                "diagnostic"
-            ],
-            "smoothing": 10
-        },
-        {
-            "title": "Transfer Small Baseline vs Diagnostic Color",
-            "ids": [
-                "base_small_0_averaged",
-                "new_small_0_averaged"
-            ],
-            "keys": [
-                "baseline",
-                "diagnostic"
-            ],
-            "xlim": [0,400],
-            "smoothing": 10
-        },
-        {
-            "title": "Transfer Small Baseline vs Diagnostic Obj",
-            "ids": [
-                "base_small_1_averaged",
-                "new_small_1_averaged"
-            ],
-            "keys": [
-                "baseline",
-                "diagnostic"
-            ],
-            "xlim": [0,400],
-            "smoothing": 10
-        },
-        {
-            "title": "Transfer Small Baseline vs Diagnostic Color+Object",
-            "ids": [
-                "base_small_2_averaged",
-                "new_small_2_averaged"
-            ],
-            "keys": [
-                "baseline",
-                "diagnostic"
-            ],
-            "xlim": [0,400],
-            "smoothing": 10
-        },
-        {
-            "title": "Transfer BeforeAfter Baseline vs Diagnostic Color",
-            "ids": [
-                "base_beforeafter_0_averaged",
-                "new_beforeafter_0_averaged"
-            ],
-            "keys": [
-                "baseline",
-                "diagnostic"
-            ],
-            "xlim": [0,400],
-            "smoothing": 10
-        },
-        {
-            "title": "Transfer BeforeAfter Baseline vs Diagnostic Obj",
-            "ids": [
-                "base_beforeafter_1_averaged",
-                "new_beforeafter_1_averaged"
-            ],
-            "keys": [
-                "baseline",
-                "diagnostic"
-            ],
-            "xlim": [0,400],
-            "smoothing": 10
-        },
-        {
-            "title": "Transfer BeforeAfter Baseline vs Diagnostic Color+Object",
-            "ids": [
-                "base_beforeafter_2_averaged",
-                "new_beforeafter_2_averaged"
-            ],
-            "keys": [
-                "baseline",
-                "diagnostic"
-            ],
-            "xlim": [0,400],
-            "smoothing": 10
-        },
-        {
-            "title": "Transfer AndOr Baseline vs Diagnostic Color",
-            "ids": [
-                "base_andor_0_averaged",
-                "new_andor_0_averaged"
-            ],
-            "keys": [
-                "baseline",
-                "diagnostic"
-            ],
-            "xlim": [0,400],
-            "smoothing": 10
-        },
-        {
-            "title": "Transfer AndOr Baseline vs Diagnostic Obj",
-            "ids": [
-                "base_andor_1_averaged",
-                "new_andor_1_averaged"
-            ],
-            "keys": [
-                "baseline",
-                "diagnostic"
-            ],
-            "xlim": [0,400],
-            "smoothing": 10
-        },
-        {
-            "title": "Transfer AndOr Baseline vs Diagnostic Color+Object",
-            "ids": [
-                "base_andor_2_averaged",
-                "new_andor_2_averaged"
-            ],
-            "keys": [
-                "baseline",
-                "diagnostic"
-            ],
-            "xlim": [0,400],
-            "smoothing": 10
-        },
-        {
-            "title": "Training drop",
-            "ids": [
-                "2300034",
-                "2651250"
-            ],
-            "keys": [
-                "baseline",
-                "diagnostic"
-            ],
-            "xlim":[2000, 10000],
-            "ylim":[0, 40],
-            "smoothing": 10
-        },
-        {
-            "title": "Trained transfer0 beforeafter",
-            "ids": [
-                "BA_0_no_new_averaged",
-                "BA_0_no_base_averaged",
-                "BA_0_yes_new_averaged",
-                "BA_0_yes_base_averaged"
-            ],
-            "keys": [
-                "no new",
-                "no base",
-                "yes new",
-                "yes base"
-            ],
-            "styles": [
-                "None",
+            "styles":[
                 "dashed",
                 "None",
-                "dashed"
-            ],
-            "smoothing": 10
-        },
-        {
-            "title": "Trained transfer1 beforeafter",
-            "ids": [
-                "BA_1_no_new_averaged",
-                "BA_1_no_base_averaged",
-                "BA_1_yes_new_averaged",
-                "BA_1_yes_base_averaged"
-            ],
-            "keys": [
-                "no new",
-                "no base",
-                "yes new",
-                "yes base"
-            ],
-            "styles": [
-                "None",
                 "dashed",
-                "None",
-                "dashed"
+                "None"
             ],
-            "smoothing": 10
-        },
-        {
-            "title": "Trained transfer2 beforeafter",
-            "ids": [
-                "BA_2_no_new_averaged",
-                "BA_2_no_base_averaged",
-                "BA_2_yes_new_averaged",
-                "BA_2_yes_base_averaged"
-            ],
-            "keys": [
-                "no new",
-                "no base",
-                "yes new",
-                "yes base"
-            ],
-            "styles": [
-                "None",
-                "dashed",
-                "None",
-                "dashed"
-            ],
-            "smoothing": 10
+            "smoothing":100,
+            "ylim": [10, 20]
         }
     ]
 }
