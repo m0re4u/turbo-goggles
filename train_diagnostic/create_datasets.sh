@@ -51,16 +51,16 @@ touch create_datasets_$EPISODES.log
 # create_datasets 2786348 022000 BabyAI-CustomGoToObjMedium-v0 sparsebeforeafter_new_seed1
 # create_datasets 2786349 022000 BabyAI-CustomGoToObjMedium-v0 sparsebeforeafter_new_seed42
 
-create_datasets 2818253 022000 BabyAI-CustomGoToObjMultiple-v0 multiple_base_seed1
-create_datasets 2818254 022000 BabyAI-CustomGoToObjMultiple-v0 multiple_base_seed42
-create_datasets 2818255 022000 BabyAI-CustomGoToObjMultiple-v0 multiple_base_seed100
-create_datasets 2812454 022000 BabyAI-CustomGoToObjMultiple-v0 multiple_new_seed1
-create_datasets 2812455 022000 BabyAI-CustomGoToObjMultiple-v0 multiple_new_seed42
-create_datasets 2812456 022000 BabyAI-CustomGoToObjMultiple-v0 multiple_new_seed100
+create_datasets 2818253 021900 BabyAI-CustomGoToObjMultiple-v0 multiple_base_seed1
+create_datasets 2818254 021900 BabyAI-CustomGoToObjMultiple-v0 multiple_base_seed42
+create_datasets 2818255 021900 BabyAI-CustomGoToObjMultiple-v0 multiple_base_seed100
+create_datasets 2812454 021900 BabyAI-CustomGoToObjMultiple-v0 multiple_new_seed1
+create_datasets 2812455 021900 BabyAI-CustomGoToObjMultiple-v0 multiple_new_seed42
+create_datasets 2812456 021900 BabyAI-CustomGoToObjMultiple-v0 multiple_new_seed100
 
-create_datasets 2818257 025000 BabyAI-CustomGoToObjThrees-v0 threes_base_seed1
-create_datasets 2818258 025000 BabyAI-CustomGoToObjThrees-v0 threes_base_seed42
-create_datasets 2818260 025000 BabyAI-CustomGoToObjThrees-v0 threes_base_seed100
-create_datasets 2812451 025000 BabyAI-CustomGoToObjThrees-v0 threes_new_seed1
-create_datasets 2812453 025000 BabyAI-CustomGoToObjThrees-v0 threes_new_seed42
-create_datasets 2812452 025000 BabyAI-CustomGoToObjThrees-v0 threes_new_seed100
+create_datasets 2818257 024900 BabyAI-CustomGoToObjThrees-v0 threes_base_seed1
+create_datasets 2818258 024900 BabyAI-CustomGoToObjThrees-v0 threes_base_seed42
+create_datasets 2818260 024900 BabyAI-CustomGoToObjThrees-v0 threes_base_seed100
+create_datasets 2812451 024900 BabyAI-CustomGoToObjThrees-v0 threes_new_seed1
+create_datasets 2812453 024900 BabyAI-CustomGoToObjThrees-v0 threes_new_seed42
+create_datasets 2812452 024900 BabyAI-CustomGoToObjThrees-v0 threes_new_seed100

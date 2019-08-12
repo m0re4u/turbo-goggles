@@ -128,47 +128,47 @@ elif [ "$LEVEL" == "sparse" ]; then
     transfer_eval 2786349 022000 28 BabyAI-TransferGoToObjBeforeAfter2-v0 new_sparsebeforeafter_seed42_colobj
 elif [ "$LEVEL" == "multiple" ]; then
     echo "MULTIPLE"
-    transfer_eval 2818253 022000 21 BabyAI-TransferGoToObjMultiple0-v0 base_multiple_seed1_color
-    transfer_eval 2818254 022000 21 BabyAI-TransferGoToObjMultiple0-v0 base_multiple_seed42_color
-    transfer_eval 2818255 022000 21 BabyAI-TransferGoToObjMultiple0-v0 base_multiple_seed100_color
-    transfer_eval 2812454 022000 21 BabyAI-TransferGoToObjMultiple0-v0 new_multiple_seed1_color
-    transfer_eval 2812455 022000 21 BabyAI-TransferGoToObjMultiple0-v0 new_multiple_seed42_color
-    transfer_eval 2812456 022000 21 BabyAI-TransferGoToObjMultiple0-v0 new_multiple_seed100_color
+    transfer_eval 2818253 021900 21 BabyAI-TransferGoToObjMultiple0-v0 base_multiple_seed1_color
+    transfer_eval 2818254 021900 21 BabyAI-TransferGoToObjMultiple0-v0 base_multiple_seed42_color
+    transfer_eval 2818255 021900 21 BabyAI-TransferGoToObjMultiple0-v0 base_multiple_seed100_color
+    transfer_eval 2812454 021900 21 BabyAI-TransferGoToObjMultiple0-v0 new_multiple_seed1_color
+    transfer_eval 2812455 021900 21 BabyAI-TransferGoToObjMultiple0-v0 new_multiple_seed42_color
+    transfer_eval 2812456 021900 21 BabyAI-TransferGoToObjMultiple0-v0 new_multiple_seed100_color
 
-    transfer_eval 2818253 022000 24 BabyAI-TransferGoToObjMultiple1-v0 base_multiple_seed1_obj
-    transfer_eval 2818254 022000 24 BabyAI-TransferGoToObjMultiple1-v0 base_multiple_seed42_obj
-    transfer_eval 2818255 022000 24 BabyAI-TransferGoToObjMultiple1-v0 base_multiple_seed100_obj
-    transfer_eval 2812454 022000 24 BabyAI-TransferGoToObjMultiple1-v0 new_multiple_seed1_obj
-    transfer_eval 2812455 022000 24 BabyAI-TransferGoToObjMultiple1-v0 new_multiple_seed42_obj
-    transfer_eval 2812456 022000 24 BabyAI-TransferGoToObjMultiple1-v0 new_multiple_seed100_obj
+    transfer_eval 2818253 021900 24 BabyAI-TransferGoToObjMultiple1-v0 base_multiple_seed1_obj
+    transfer_eval 2818254 021900 24 BabyAI-TransferGoToObjMultiple1-v0 base_multiple_seed42_obj
+    transfer_eval 2818255 021900 24 BabyAI-TransferGoToObjMultiple1-v0 base_multiple_seed100_obj
+    transfer_eval 2812454 021900 24 BabyAI-TransferGoToObjMultiple1-v0 new_multiple_seed1_obj
+    transfer_eval 2812455 021900 24 BabyAI-TransferGoToObjMultiple1-v0 new_multiple_seed42_obj
+    transfer_eval 2812456 021900 24 BabyAI-TransferGoToObjMultiple1-v0 new_multiple_seed100_obj
 
-    transfer_eval 2818253 022000 28 BabyAI-TransferGoToObjMultiple2-v0 base_multiple_seed1_colobj
-    transfer_eval 2818254 022000 28 BabyAI-TransferGoToObjMultiple2-v0 base_multiple_seed42_colobj
-    transfer_eval 2818255 022000 28 BabyAI-TransferGoToObjMultiple2-v0 base_multiple_seed100_colobj
-    transfer_eval 2812454 022000 28 BabyAI-TransferGoToObjMultiple2-v0 new_multiple_seed1_colobj
-    transfer_eval 2812455 022000 28 BabyAI-TransferGoToObjMultiple2-v0 new_multiple_seed42_colobj
-    transfer_eval 2812456 022000 28 BabyAI-TransferGoToObjMultiple2-v0 new_multiple_seed100_colobj
+    transfer_eval 2818253 021900 28 BabyAI-TransferGoToObjMultiple2-v0 base_multiple_seed1_colobj
+    transfer_eval 2818254 021900 28 BabyAI-TransferGoToObjMultiple2-v0 base_multiple_seed42_colobj
+    transfer_eval 2818255 021900 28 BabyAI-TransferGoToObjMultiple2-v0 base_multiple_seed100_colobj
+    transfer_eval 2812454 021900 28 BabyAI-TransferGoToObjMultiple2-v0 new_multiple_seed1_colobj
+    transfer_eval 2812455 021900 28 BabyAI-TransferGoToObjMultiple2-v0 new_multiple_seed42_colobj
+    transfer_eval 2812456 021900 28 BabyAI-TransferGoToObjMultiple2-v0 new_multiple_seed100_colobj
 
 elif [ "$LEVEL" == "threes" ]; then
     echo "THREES"
-    transfer_eval 2818257 025000 21 BabyAI-TransferGoToObjThrees0-v0 base_threes_seed1_color
-    transfer_eval 2818258 025000 21 BabyAI-TransferGoToObjThrees0-v0 base_threes_seed42_color
-    transfer_eval 2818260 025000 21 BabyAI-TransferGoToObjThrees0-v0 base_threes_seed100_color
-    transfer_eval 2812451 025000 21 BabyAI-TransferGoToObjThrees0-v0 new_threes_seed1_color
-    transfer_eval 2812453 025000 21 BabyAI-TransferGoToObjThrees0-v0 new_threes_seed42_color
-    transfer_eval 2812452 025000 21 BabyAI-TransferGoToObjThrees0-v0 new_threes_seed100_color
+    transfer_eval 2818257 024900 21 BabyAI-TransferGoToObjThrees0-v0 base_threes_seed1_color
+    transfer_eval 2818258 024900 21 BabyAI-TransferGoToObjThrees0-v0 base_threes_seed42_color
+    transfer_eval 2818260 024900 21 BabyAI-TransferGoToObjThrees0-v0 base_threes_seed100_color
+    transfer_eval 2812451 024900 21 BabyAI-TransferGoToObjThrees0-v0 new_threes_seed1_color
+    transfer_eval 2812453 024900 21 BabyAI-TransferGoToObjThrees0-v0 new_threes_seed42_color
+    transfer_eval 2812452 024900 21 BabyAI-TransferGoToObjThrees0-v0 new_threes_seed100_color
 
-    transfer_eval 2818257 025000 24 BabyAI-TransferGoToObjThrees1-v0 base_threes_seed1_obj
-    transfer_eval 2818258 025000 24 BabyAI-TransferGoToObjThrees1-v0 base_threes_seed42_obj
-    transfer_eval 2818260 025000 24 BabyAI-TransferGoToObjThrees1-v0 base_threes_seed100_obj
-    transfer_eval 2812451 025000 24 BabyAI-TransferGoToObjThrees1-v0 new_threes_seed1_obj
-    transfer_eval 2812453 025000 24 BabyAI-TransferGoToObjThrees1-v0 new_threes_seed42_obj
-    transfer_eval 2812452 025000 24 BabyAI-TransferGoToObjThrees1-v0 new_threes_seed100_obj
+    transfer_eval 2818257 024900 24 BabyAI-TransferGoToObjThrees1-v0 base_threes_seed1_obj
+    transfer_eval 2818258 024900 24 BabyAI-TransferGoToObjThrees1-v0 base_threes_seed42_obj
+    transfer_eval 2818260 024900 24 BabyAI-TransferGoToObjThrees1-v0 base_threes_seed100_obj
+    transfer_eval 2812451 024900 24 BabyAI-TransferGoToObjThrees1-v0 new_threes_seed1_obj
+    transfer_eval 2812453 024900 24 BabyAI-TransferGoToObjThrees1-v0 new_threes_seed42_obj
+    transfer_eval 2812452 024900 24 BabyAI-TransferGoToObjThrees1-v0 new_threes_seed100_obj
 
-    transfer_eval 2818257 025000 28 BabyAI-TransferGoToObjThrees2-v0 base_threes_seed1_colobj
-    transfer_eval 2818258 025000 28 BabyAI-TransferGoToObjThrees2-v0 base_threes_seed42_colobj
-    transfer_eval 2818260 025000 28 BabyAI-TransferGoToObjThrees2-v0 base_threes_seed100_colobj
-    transfer_eval 2812451 025000 28 BabyAI-TransferGoToObjThrees2-v0 new_threes_seed1_colobj
-    transfer_eval 2812453 025000 28 BabyAI-TransferGoToObjThrees2-v0 new_threes_seed42_colobj
-    transfer_eval 2812452 025000 28 BabyAI-TransferGoToObjThrees2-v0 new_threes_seed100_colobj
+    transfer_eval 2818257 024900 28 BabyAI-TransferGoToObjThrees2-v0 base_threes_seed1_colobj
+    transfer_eval 2818258 024900 28 BabyAI-TransferGoToObjThrees2-v0 base_threes_seed42_colobj
+    transfer_eval 2818260 024900 28 BabyAI-TransferGoToObjThrees2-v0 base_threes_seed100_colobj
+    transfer_eval 2812451 024900 28 BabyAI-TransferGoToObjThrees2-v0 new_threes_seed1_colobj
+    transfer_eval 2812453 024900 28 BabyAI-TransferGoToObjThrees2-v0 new_threes_seed42_colobj
+    transfer_eval 2812452 024900 28 BabyAI-TransferGoToObjThrees2-v0 new_threes_seed100_colobj
 fi
