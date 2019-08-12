@@ -46,21 +46,21 @@ touch create_datasets_$EPISODES.log
 # create_datasets 2689036 025000 BabyAI-CustomGoToObjMedium-v0 beforeafter_new_seed100
 
 
-create_datasets 2782514 022000 BabyAI-CustomGoToObjSmall-v0 sparsesmall_new_seed1
-create_datasets 2782515 022000 BabyAI-CustomGoToObjSmall-v0 sparsesmall_new_seed42
-create_datasets 2786348 022000 BabyAI-CustomGoToObjMedium-v0 sparsebeforeafter_new_seed1
-create_datasets 2786349 022000 BabyAI-CustomGoToObjMedium-v0 sparsebeforeafter_new_seed42
+# create_datasets 2782514 022000 BabyAI-CustomGoToObjSmall-v0 sparsesmall_new_seed1
+# create_datasets 2782515 022000 BabyAI-CustomGoToObjSmall-v0 sparsesmall_new_seed42
+# create_datasets 2786348 022000 BabyAI-CustomGoToObjMedium-v0 sparsebeforeafter_new_seed1
+# create_datasets 2786349 022000 BabyAI-CustomGoToObjMedium-v0 sparsebeforeafter_new_seed42
 
-create_datasets 2787207 014500 BabyAI-CustomGoToObjMultiple-v0 multiple_base_seed1
-create_datasets 2787208 014500 BabyAI-CustomGoToObjMultiple-v0 multiple_base_seed42
-create_datasets 2787206 014500 BabyAI-CustomGoToObjMultiple-v0 multiple_base_seed100
-create_datasets 2787396 016500 BabyAI-CustomGoToObjMultiple-v0 multiple_new_seed1
-create_datasets 2787397 016500 BabyAI-CustomGoToObjMultiple-v0 multiple_new_seed42
-create_datasets 2787398 014500 BabyAI-CustomGoToObjMultiple-v0 multiple_new_seed100
+create_datasets 2787207 022000 BabyAI-CustomGoToObjMultiple-v0 multiple_base_seed1
+create_datasets 2787208 022000 BabyAI-CustomGoToObjMultiple-v0 multiple_base_seed42
+create_datasets 2787206 022000 BabyAI-CustomGoToObjMultiple-v0 multiple_base_seed100
+create_datasets 2787396 022000 BabyAI-CustomGoToObjMultiple-v0 multiple_new_seed1
+create_datasets 2787397 022000 BabyAI-CustomGoToObjMultiple-v0 multiple_new_seed42
+create_datasets 2787398 022000 BabyAI-CustomGoToObjMultiple-v0 multiple_new_seed100
 
-create_datasets 2787423 011000 BabyAI-CustomGoToObjThrees-v0 threes_base_seed1
-create_datasets 2787424 011000 BabyAI-CustomGoToObjThrees-v0 threes_base_seed42
-create_datasets 2787422 011000 BabyAI-CustomGoToObjThrees-v0 threes_base_seed100
-create_datasets 2787426 013000 BabyAI-CustomGoToObjThrees-v0 threes_new_seed1
-create_datasets 2787427 011000 BabyAI-CustomGoToObjThrees-v0 threes_new_seed42
-create_datasets 2787425 013000 BabyAI-CustomGoToObjThrees-v0 threes_new_seed100
+create_datasets 2787423 025000 BabyAI-CustomGoToObjThrees-v0 threes_base_seed1
+create_datasets 2787424 025000 BabyAI-CustomGoToObjThrees-v0 threes_base_seed42
+create_datasets 2787422 025000 BabyAI-CustomGoToObjThrees-v0 threes_base_seed100
+create_datasets 2787426 025000 BabyAI-CustomGoToObjThrees-v0 threes_new_seed1
+create_datasets 2787427 025000 BabyAI-CustomGoToObjThrees-v0 threes_new_seed42
+create_datasets 2787425 025000 BabyAI-CustomGoToObjThrees-v0 threes_new_seed100
