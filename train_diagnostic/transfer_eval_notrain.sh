@@ -114,18 +114,18 @@ elif [ "$LEVEL" == "sparse" ]; then
     echo "sparse"
     transfer_eval 2782514 022000 21 BabyAI-TransferGoToObjSmall0-v0 new_sparsesmall_seed1_color
     transfer_eval 2782515 022000 21 BabyAI-TransferGoToObjSmall0-v0 new_sparsesmall_seed42_color
-    transfer_eval 2786348 022000 21 BabyAI-TransferGoToObjBeforeAfter0-v0 new_sparsebeforeafter_seed1_color
-    transfer_eval 2786349 022000 21 BabyAI-TransferGoToObjBeforeAfter0-v0 new_sparsebeforeafter_seed42_color
+    transfer_eval 2827355 032000 21 BabyAI-TransferGoToObjBeforeAfter0-v0 new_sparsebeforeafter_seed1_color
+    transfer_eval 2827356 032000 21 BabyAI-TransferGoToObjBeforeAfter0-v0 new_sparsebeforeafter_seed42_color
 
     transfer_eval 2782514 022000 24 BabyAI-TransferGoToObjSmall1-v0 new_sparsesmall_seed1_obj
     transfer_eval 2782515 022000 24 BabyAI-TransferGoToObjSmall1-v0 new_sparsesmall_seed42_obj
-    transfer_eval 2786348 022000 24 BabyAI-TransferGoToObjBeforeAfter1-v0 new_sparsebeforeafter_seed1_obj
-    transfer_eval 2786349 022000 24 BabyAI-TransferGoToObjBeforeAfter1-v0 new_sparsebeforeafter_seed42_obj
+    transfer_eval 2827355 032000 24 BabyAI-TransferGoToObjBeforeAfter1-v0 new_sparsebeforeafter_seed1_obj
+    transfer_eval 2827356 032000 24 BabyAI-TransferGoToObjBeforeAfter1-v0 new_sparsebeforeafter_seed42_obj
 
     transfer_eval 2782514 022000 28 BabyAI-TransferGoToObjSmall2-v0 new_sparsesmall_seed1_colobj
     transfer_eval 2782515 022000 28 BabyAI-TransferGoToObjSmall2-v0 new_sparsesmall_seed42_colobj
-    transfer_eval 2786348 022000 28 BabyAI-TransferGoToObjBeforeAfter2-v0 new_sparsebeforeafter_seed1_colobj
-    transfer_eval 2786349 022000 28 BabyAI-TransferGoToObjBeforeAfter2-v0 new_sparsebeforeafter_seed42_colobj
+    transfer_eval 2827355 032000 28 BabyAI-TransferGoToObjBeforeAfter2-v0 new_sparsebeforeafter_seed1_colobj
+    transfer_eval 2827356 032000 28 BabyAI-TransferGoToObjBeforeAfter2-v0 new_sparsebeforeafter_seed42_colobj
 elif [ "$LEVEL" == "multiple" ]; then
     echo "MULTIPLE"
     transfer_eval 2818253 021900 21 BabyAI-TransferGoToObjMultiple0-v0 base_multiple_seed1_color

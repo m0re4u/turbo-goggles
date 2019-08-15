@@ -50,21 +50,21 @@ touch eval_diags_$EPISODES.log
 # eval_diags_online 2689035 025000 BabyAI-CustomGoToObjMedium-v0 beforeafter_new_seed42
 # eval_diags_online 2689036 025000 BabyAI-CustomGoToObjMedium-v0 beforeafter_new_seed100
 
-# eval_diags_online 2782514 022000 BabyAI-CustomGoToObjSmall-v0 sparsesmall_new_seed1
-# eval_diags_online 2782515 022000 BabyAI-CustomGoToObjSmall-v0 sparsesmall_new_seed42
-# eval_diags_online 2786348 022000 BabyAI-CustomGoToObjMedium-v0 sparsebeforeafter_new_seed1
-# eval_diags_online 2786349 022000 BabyAI-CustomGoToObjMedium-v0 sparsebeforeafter_new_seed42
+eval_diags_online 2782514 022000 BabyAI-CustomGoToObjSmall-v0 sparsesmall_new_seed1
+eval_diags_online 2782515 022000 BabyAI-CustomGoToObjSmall-v0 sparsesmall_new_seed42
+eval_diags_online 2827355 032000 BabyAI-CustomGoToObjMedium-v0 sparsebeforeafter_new_seed1
+eval_diags_online 2827356 032000 BabyAI-CustomGoToObjMedium-v0 sparsebeforeafter_new_seed42
 
-eval_diags_online 2818253 021900 BabyAI-CustomGoToObjMultiple-v0 multiple_base_seed1
-eval_diags_online 2818254 021900 BabyAI-CustomGoToObjMultiple-v0 multiple_base_seed42
-eval_diags_online 2818255 021900 BabyAI-CustomGoToObjMultiple-v0 multiple_base_seed100
-eval_diags_online 2812454 021900 BabyAI-CustomGoToObjMultiple-v0 multiple_new_seed1
-eval_diags_online 2812455 021900 BabyAI-CustomGoToObjMultiple-v0 multiple_new_seed42
-eval_diags_online 2812456 021900 BabyAI-CustomGoToObjMultiple-v0 multiple_new_seed100
+# eval_diags_online 2818253 021900 BabyAI-CustomGoToObjMultiple-v0 multiple_base_seed1
+# eval_diags_online 2818254 021900 BabyAI-CustomGoToObjMultiple-v0 multiple_base_seed42
+# eval_diags_online 2818255 021900 BabyAI-CustomGoToObjMultiple-v0 multiple_base_seed100
+# eval_diags_online 2812454 021900 BabyAI-CustomGoToObjMultiple-v0 multiple_new_seed1
+# eval_diags_online 2812455 021900 BabyAI-CustomGoToObjMultiple-v0 multiple_new_seed42
+# eval_diags_online 2812456 021900 BabyAI-CustomGoToObjMultiple-v0 multiple_new_seed100
 
-eval_diags_online 2818257 024900 BabyAI-CustomGoToObjThrees-v0 threes_base_seed1
-eval_diags_online 2818258 024900 BabyAI-CustomGoToObjThrees-v0 threes_base_seed42
-eval_diags_online 2818260 024900 BabyAI-CustomGoToObjThrees-v0 threes_base_seed100
-eval_diags_online 2812451 024900 BabyAI-CustomGoToObjThrees-v0 threes_new_seed1
-eval_diags_online 2812453 024900 BabyAI-CustomGoToObjThrees-v0 threes_new_seed42
-eval_diags_online 2812452 024900 BabyAI-CustomGoToObjThrees-v0 threes_new_seed100
+# eval_diags_online 2818257 024900 BabyAI-CustomGoToObjThrees-v0 threes_base_seed1
+# eval_diags_online 2818258 024900 BabyAI-CustomGoToObjThrees-v0 threes_base_seed42
+# eval_diags_online 2818260 024900 BabyAI-CustomGoToObjThrees-v0 threes_base_seed100
+# eval_diags_online 2812451 024900 BabyAI-CustomGoToObjThrees-v0 threes_new_seed1
+# eval_diags_online 2812453 024900 BabyAI-CustomGoToObjThrees-v0 threes_new_seed42
+# eval_diags_online 2812452 024900 BabyAI-CustomGoToObjThrees-v0 threes_new_seed100
