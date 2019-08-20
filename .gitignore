@@ -117,6 +117,11 @@ babyai_treegen/vocab.json
 
 plotting/data
 plotting/results
+plotting/bar.png
+plotting/sparse_bar.png
+plotting/copy.txt
+plotting/acc_bar_data.txt
+plotting/sparse_acc_bar_data.txt
 
 utils/data
 utils/results
@@ -129,3 +134,6 @@ train_diagnostic/outs
 train_diagnostic/test.py
 train_diagnostic/read.py
 train_diagnostic/combine_data.sh
+train_diagnostic/all_dirs.txt
+train_diagnostic/keep_dirs.txt
+train_diagnostic/list_rm_dirs.py
