@@ -4,6 +4,8 @@ import re
 from pathlib import Path
 
 import matplotlib.pyplot as plt
+import matplotlib
+matplotlib.rcParams.update({'font.size': 22})
 import numpy as np
 
 
@@ -34,10 +36,13 @@ def get_data(id, mode, data_dir):
 
 
 def create_plot(plot, data_dir="data/", result_dir="results/", show=False, mode="el"):
-    title = f"{plot['title']}_{mode}"
-    plt.figure()
+    if mode == "el":
+        title = f"Episode Length {plot['title']}"
+    else:
+        title = f"Success Rate {plot['title']}"
+    plt.figure(figsize=(10,6))
     plt.title(title)
-    plt.gcf().text(0, 0.01, plot['ids'], fontsize=8)
+    # plt.gcf().text(0, 0.01, plot['ids'], fontsize=8)
     if 'xlim' in plot:
         plt.xlim(*plot['xlim'])
     if 'ylim' in plot:
@@ -50,15 +55,15 @@ def create_plot(plot, data_dir="data/", result_dir="results/", show=False, mode=
             dash = [6,2]
         else:
             dash = (None, None)
-        plt.plot(smooth(data[:, -1], plot['smoothing']), label=plot['keys'][i],dashes=dash)
+        plt.plot(smooth(data[:, -1], plot['smoothing']), label=plot['keys'][i],dashes=dash, linewidth=2)
     plt.ylabel(ylabel)
     plt.xlabel("Number of training iterations")
-    plt.legend()
+    plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.2), ncol=2, fancybox=True, shadow=True)
     if show:
         plt.show()
     else:
         out = re.sub("[ -]+", "_", title.lower())
-        plt.savefig(Path(result_dir, out))
+        plt.savefig(Path(result_dir, out), bbox_inches='tight')
 
 
 def main(args):

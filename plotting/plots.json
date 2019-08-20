@@ -1,7 +1,7 @@
 {
     "plots": [
         {
-            "title": "train curve paper",
+            "title": "Training Progress",
             "ids": [
                 "small_base_averaged",
                 "small_new_averaged",
@@ -20,8 +20,30 @@
                 "dashed",
                 "None"
             ],
-            "smoothing":100,
+            "smoothing": 100,
             "ylim": [10, 20]
+        },
+        {
+            "title": "Training Progress Complex",
+            "ids": [
+                "multiple_base_averaged",
+                "multiple_new_averaged",
+                "threes_base_averaged",
+                "threes_new_averaged"
+            ],
+            "keys": [
+                "Baseline multiple",
+                "Aware multiple",
+                "Baseline threes",
+                "Aware threes"
+            ],
+            "styles":[
+                "dashed",
+                "None",
+                "dashed",
+                "None"
+            ],
+            "smoothing":100
         }
     ]
 }

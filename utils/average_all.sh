@@ -95,3 +95,15 @@ python3 average_data.py 2651250 2654157 2669857 --outfile "small new" --sr
 
 python3 average_data.py 2689034 2689035 2689036 --outfile "ba new"
 python3 average_data.py 2689034 2689035 2689036 --outfile "ba new" --sr
+
+python3 average_data.py 2818253 2818254 2818255 --outfile "multiple base"
+python3 average_data.py 2818253 2818254 2818255 --outfile "multiple base" --sr
+
+python3 average_data.py 2812454 2812455 2812456 --outfile "multiple new"
+python3 average_data.py 2812454 2812455 2812456 --outfile "multiple new" --sr
+
+python3 average_data.py 2818257 2818258 2818260 --outfile "threes base"
+python3 average_data.py 2818257 2818258 2818260 --outfile "threes base" --sr
+
+python3 average_data.py 2812451 2812453 2812452 --outfile "threes new"
+python3 average_data.py 2812451 2812453 2812452 --outfile "threes new" --sr
