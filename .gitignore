@@ -118,10 +118,12 @@ babyai_treegen/vocab.json
 plotting/data
 plotting/results
 plotting/bar.png
+plotting/curve.png
 plotting/sparse_bar.png
 plotting/copy.txt
 plotting/acc_bar_data.txt
 plotting/sparse_acc_bar_data.txt
+plotting/off_curve_data.txt
 
 utils/data
 utils/results

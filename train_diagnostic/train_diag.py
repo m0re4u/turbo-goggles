@@ -179,6 +179,7 @@ if __name__ == "__main__":
 
     LOG_FORMAT = '%(asctime)s %(name)-6s %(levelname)-6s %(message)s'
     logging.basicConfig(format=LOG_FORMAT,
+                        filename='train_diag.log',
                         level=getattr(logging, 'info'.upper()))
     if args.machine:
         logging.disable(logging.CRITICAL)
