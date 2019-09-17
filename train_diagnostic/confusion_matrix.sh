@@ -20,13 +20,7 @@ function confusion {
 
 
 confusion 2651250 010800 BabyAI-CustomGoToObjSmall-v0 small_new_seed1
-confusion 2654157 010800 BabyAI-CustomGoToObjSmall-v0 small_new_seed42
-confusion 2669857 010800 BabyAI-CustomGoToObjSmall-v0 small_new_seed100
-
 confusion 2691623 010000 BabyAI-CustomGoToObjAnd-v0 and_new_seed1
-confusion 2731546 009500 BabyAI-CustomGoToObjAnd-v0 and_new_seed43
-confusion 2691625 010000 BabyAI-CustomGoToObjAnd-v0 and_new_seed100
-
 confusion 2689034 025000 BabyAI-CustomGoToObjMedium-v0 beforeafter_new_seed1
-confusion 2689035 025000 BabyAI-CustomGoToObjMedium-v0 beforeafter_new_seed42
-confusion 2689036 025000 BabyAI-CustomGoToObjMedium-v0 beforeafter_new_seed100
+confusion 2812454 021900 BabyAI-CustomGoToObjMultiple-v0 multiple_new_seed1
+confusion 2812451 024900 BabyAI-CustomGoToObjThrees-v0 threes_new_seed1

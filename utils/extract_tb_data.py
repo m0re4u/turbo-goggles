@@ -5,7 +5,10 @@ from tensorboard.backend.event_processing.event_accumulator import EventAccumula
 
 
 def main(filename, out_prefix):
-    evt = EventAccumulator(filename).Reload()
+    size_guidance = {
+        "scalars":0
+    }
+    evt = EventAccumulator(filename, size_guidance=size_guidance).Reload()
     keys = evt.scalars.Keys()
 
     relevant_keys = ['train/succes_rate', 'train/episode_length']

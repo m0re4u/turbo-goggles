@@ -36,16 +36,6 @@ function pull_job {
     rsync -e "ssh $SSH_ARGS" $LISA_USERNAME@$LISA_HOSTNAME:$LISA_AGG_PATH/$OUT_PREFIX* data/
 }
 
-function plot_jobs {
-    echo $*
-    shopt -s nullglob
-    FS=(data/agg_succes_rate)
-    # if ! [ -z "$FS" ]; then
-    #     OUT=$(basename $FS)
-    #     gnuplot -c ../plotting/plot_ep_lengths.gnu results/$OUT.png
-    # fi
-}
-
 if [ -z "$LISA_USERNAME" ]; then
     echo "LISA username unset"
     exit 1
@@ -72,5 +62,3 @@ else
         fi
     done
 fi
-
-plot_jobs ${job_arr[@]}

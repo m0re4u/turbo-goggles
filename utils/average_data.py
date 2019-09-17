@@ -16,14 +16,17 @@ def main(args):
     # Load data from each file and keep data until shortest file length
     mats = [np.loadtxt(f, skiprows=1, delimiter=',') for f in files]
     min_length = min([x.shape[0] for x in mats])
+    print(args.outfile, [x.shape[0] for x in mats])
     eq_ms = [mat[:min_length, 2] for mat in mats]
 
     # Average every point
     avg_m = np.average(eq_ms, axis=0)
+    std_m = np.std(eq_ms, axis=0)
 
     # Recreate file format for plotting
-    out = np.zeros((min_length, 3))
-    out[:, -1] = avg_m
+    out = np.zeros((min_length, 4))
+    out[:, 2] = avg_m
+    out[:, 3] = std_m
     out[:, 1] = np.arange(min_length)
 
     # Output file

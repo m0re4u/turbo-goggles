@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -eu
 # # Transfer experiments
 # python3 average_data.py 2629753 2644659 2644665 --outfile "base small 0"
 # python3 average_data.py 2629753 2644659 2644665 --outfile "base small 0" --sr
@@ -87,11 +87,11 @@
 python3 average_data.py 2654515 2669640 2669641 --outfile "small base"
 python3 average_data.py 2654515 2669640 2669641 --outfile "small base" --sr
 
-python3 average_data.py 2669860 2669861 2669862 --outfile "ba base"
-python3 average_data.py 2669860 2669861 2669862 --outfile "ba base" --sr
-
 python3 average_data.py 2651250 2654157 2669857 --outfile "small new"
 python3 average_data.py 2651250 2654157 2669857 --outfile "small new" --sr
+
+python3 average_data.py 2669860 2669861 2669862 --outfile "ba base"
+python3 average_data.py 2669860 2669861 2669862 --outfile "ba base" --sr
 
 python3 average_data.py 2689034 2689035 2689036 --outfile "ba new"
 python3 average_data.py 2689034 2689035 2689036 --outfile "ba new" --sr
@@ -107,3 +107,12 @@ python3 average_data.py 2818257 2818258 2818260 --outfile "threes base" --sr
 
 python3 average_data.py 2812451 2812453 2812452 --outfile "threes new"
 python3 average_data.py 2812451 2812453 2812452 --outfile "threes new" --sr
+
+python3 average_data.py 2709216 2709217 2709218 --outfile "and base"
+python3 average_data.py 2709216 2709217 2709218 --outfile "and base" --sr
+
+python3 average_data.py 2691623 2691625 2731545 --outfile "and new"
+python3 average_data.py 2691623 2691625 2731545 --outfile "and new" --sr
+
+mv el* ../plotting/data/
+mv sr* ../plotting/data/

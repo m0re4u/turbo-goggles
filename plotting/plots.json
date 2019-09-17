@@ -1,49 +1,139 @@
 {
     "plots": [
         {
-            "title": "Training Progress",
+            "title": "\\textsc{Before}",
             "ids": [
                 "small_base_averaged",
-                "small_new_averaged",
+                "small_new_averaged"
+            ],
+            "keys": [
+                "Baseline",
+                "Aware"
+            ],
+            "linestyles":[
+                "dashed",
+                "None"
+            ],
+            "style":{
+                "el":{
+                    "ylim":[8,25],
+                    "xlim":[0,10000]
+                },
+                "sr":{
+                    "ylim":[0,1.1],
+                    "xlim":[0,10000]
+                }
+            },
+            "smoothing":20,
+            "std": true
+        },
+        {
+            "title": "\\textsc{Mixed-2}",
+            "ids": [
                 "ba_base_averaged",
                 "ba_new_averaged"
             ],
             "keys": [
-                "Baseline small",
-                "Aware small",
-                "Baseline BA",
-                "Aware BA"
+                "Baseline",
+                "Aware"
             ],
-            "styles":[
-                "dashed",
-                "None",
+            "linestyles":[
                 "dashed",
                 "None"
             ],
-            "smoothing": 100,
-            "ylim": [10, 20]
+            "style":{
+                "el":{
+                    "ylim":[8,25],
+                    "xlim":[0,14000]
+                },
+                "sr":{
+                    "ylim":[0,1.1],
+                    "xlim":[0,14000]
+                }
+            },
+            "smoothing":70,
+            "std": true
         },
         {
-            "title": "Training Progress Complex",
+            "title": "\\textsc{And}",
+            "ids": [
+                "and_base_averaged",
+                "and_new_averaged"
+            ],
+            "keys": [
+                "Baseline",
+                "Aware"
+            ],
+            "linestyles":[
+                "dashed",
+                "None"
+            ],
+            "style":{
+                "el":{
+                    "ylim":[8,25],
+                    "xlim":[0,11000]
+                },
+                "sr":{
+                    "ylim":[0,1.1],
+                    "xlim":[0,11000]
+                }
+            },
+            "smoothing":20,
+            "std": true
+        },
+        {
+            "title": "\\textsc{Before(repeat)}",
             "ids": [
                 "multiple_base_averaged",
-                "multiple_new_averaged",
+                "multiple_new_averaged"
+            ],
+            "keys": [
+                "Baseline",
+                "Aware"
+            ],
+            "linestyles":[
+                "dashed",
+                "None"
+            ],
+            "style":{
+                "el":{
+                    "ylim":[8,25],
+                    "xlim":[0,22000]
+                },
+                "sr":{
+                    "xlim":[0,22000],
+                    "ylim":[0,1.1]
+                }
+            },
+            "smoothing":20,
+            "std": true
+        },
+        {
+            "title": "\\textsc{Mixed-3}",
+            "ids": [
                 "threes_base_averaged",
                 "threes_new_averaged"
             ],
             "keys": [
-                "Baseline multiple",
-                "Aware multiple",
-                "Baseline threes",
-                "Aware threes"
+                "Baseline",
+                "Aware"
             ],
-            "styles":[
-                "dashed",
-                "None",
+            "linestyles":[
                 "dashed",
                 "None"
             ],
-            "smoothing":100
+            "style":{
+                "el":{
+                    "ylim":[12,30],
+                    "xlim":[0,27000]
+                },
+                "sr":{
+                    "ylim":[0,1.1],
+                    "xlim":[0,27000]
+                }
+            },
+            "smoothing":20,
+            "std": true
         }
     ]
 }

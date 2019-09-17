@@ -19,10 +19,12 @@ def main():
 
     ax.set_title('Accuracy progress in offline training')
     ax.set_ylabel('Accuracy')
+    ax.yaxis.set_label_coords(-0.07,0.5)
+    ax.xaxis.set_label_coords(0.5,-0.1)
     ax.set_xlabel('Offline epochs')
     ax.set_ylim([0,1])
     ax.legend((p1[0], p1_val[0], p2[0],p2_val[0]), ('Baseline (train)', 'Baseline (val)', 'Aware (train)', 'Aware (val)'), loc='upper left',ncol=2, fancybox=True, shadow=True)
-    plt.savefig("curve.png", bbox_inches='tight')
+    plt.savefig("curve.png", bbox_inches='tight', transparent=True)
 
 
 

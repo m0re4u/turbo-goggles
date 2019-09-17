@@ -5,7 +5,8 @@ from pathlib import Path
 
 import matplotlib.pyplot as plt
 import matplotlib
-matplotlib.rcParams.update({'font.size': 22})
+matplotlib.rcParams.update({'font.size': 20})
+matplotlib.rc('text', usetex = True)
 import numpy as np
 
 
@@ -40,22 +41,33 @@ def create_plot(plot, data_dir="data/", result_dir="results/", show=False, mode=
         title = f"Episode Length {plot['title']}"
     else:
         title = f"Success Rate {plot['title']}"
-    plt.figure(figsize=(10,6))
+    plt.figure(figsize=(10,4))
     plt.title(title)
-    # plt.gcf().text(0, 0.01, plot['ids'], fontsize=8)
-    if 'xlim' in plot:
-        plt.xlim(*plot['xlim'])
-    if 'ylim' in plot:
-        plt.ylim(*plot['ylim'])
+    if 'style' in plot:
+        if 'xlim' in plot['style'][mode]:
+            plt.xlim(*plot['style'][mode]['xlim'])
+        if 'ylim' in plot['style'][mode]:
+            plt.ylim(*plot['style'][mode]['ylim'])
+
     for i, id in enumerate(plot['ids']):
         file, ylabel = get_data(id, mode, data_dir)
         data = np.loadtxt(file, skiprows=1, delimiter=',')
 
-        if 'styles' in plot and plot['styles'][i] == 'dashed':
+        if 'linestyles' in plot and plot['linestyles'][i] == 'dashed':
             dash = [6,2]
         else:
             dash = (None, None)
-        plt.plot(smooth(data[:, -1], plot['smoothing']), label=plot['keys'][i],dashes=dash, linewidth=2)
+        if 'std' in plot and plot['std'] is True:
+            sigma=data[:, 3]
+            mu=smooth(data[:, 2], plot['smoothing'])
+            x = np.arange(mu.shape[0])
+            top = smooth(data[:, 2]+sigma, plot['smoothing'])
+            bottom = smooth(data[:, 2]-sigma, plot['smoothing'])
+            plt.plot(smooth(mu, plot['smoothing']), label=plot['keys'][i],dashes=dash, linewidth=2,)
+            plt.fill_between(x,bottom, top, alpha=0.5)
+        else:
+            plt.plot(smooth(data[:, -1], plot['smoothing']), label=plot['keys'][i],dashes=dash, linewidth=2)
+
     plt.ylabel(ylabel)
     plt.xlabel("Number of training iterations")
     plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.2), ncol=2, fancybox=True, shadow=True)

@@ -120,10 +120,15 @@ plotting/results
 plotting/bar.png
 plotting/curve.png
 plotting/sparse_bar.png
+plotting/base_stack_complex.png
+plotting/base_stack_simple.png
 plotting/copy.txt
 plotting/acc_bar_data.txt
 plotting/sparse_acc_bar_data.txt
 plotting/off_curve_data.txt
+plotting/rate_data_base_complex.txt
+plotting/rate_data_base_simple.txt
+plotting/rate_data_base.txt
 
 utils/data
 utils/results
