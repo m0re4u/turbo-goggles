@@ -23,14 +23,14 @@ function transfer_eval {
         --diag_targets $3 \
         --machine \
         --seed $i \
-        --episodes $EPISODES >> trained_transfer_eval_"$EPISODES"_$LEVEL_$INVERT.log;
-        sed -i '${s/$/'",$5_$i"'/}' "trained_transfer_eval_"$EPISODES"_$LEVEL_$INVERT.log"
+        --episodes $EPISODES >> trained_transfer_eval_"$EPISODES"_"$LEVEL"_$INVERT.log;
+        sed -i '${s/$/'",$5_$i"'/}' "trained_transfer_eval_"$EPISODES"_"$LEVEL"_$INVERT.log"
     done
 }
 
 
-rm -f trained_transfer_eval_"$EPISODES"_$LEVEL_$INVERT.log
-touch trained_transfer_eval_"$EPISODES"_$LEVEL_$INVERT.log
+rm -f trained_transfer_eval_"$EPISODES"_"$LEVEL"_$INVERT.log
+touch trained_transfer_eval_"$EPISODES"_"$LEVEL"_$INVERT.log
 
 
 if [ $INVERT == 'yes' ]; then
