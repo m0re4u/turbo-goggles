@@ -148,5 +148,47 @@ else
         transfer_eval 2733954 000400 21 BabyAI-TransferGoToObjAnd0-v0 train_new_and_100_color 2691625
         transfer_eval 2733960 000400 24 BabyAI-TransferGoToObjAnd1-v0 train_new_and_100_obj 2691625
         transfer_eval 2733966 000400 28 BabyAI-TransferGoToObjAnd2-v0 train_new_and_100_colobj 2691625
+    elif [ "$LEVEL" == "multiple" ]; then
+        # multiple level
+        echo "multiple"
+        transfer_eval 3003416 000400 21 BabyAI-TransferGoToObjMultiple0-v0 train_base_multiple_1_color 2818253
+        transfer_eval 3003422 000400 24 BabyAI-TransferGoToObjMultiple1-v0 train_base_multiple_1_obj 2818253
+        transfer_eval 3003428 000400 28 BabyAI-TransferGoToObjMultiple2-v0 train_base_multiple_1_colobj 2818253
+        transfer_eval 3003415 000400 21 BabyAI-TransferGoToObjMultiple0-v0 train_base_multiple_42_color 2818254
+        transfer_eval 3003421 000400 24 BabyAI-TransferGoToObjMultiple1-v0 train_base_multiple_42_obj 2818254
+        transfer_eval 3003427 000400 28 BabyAI-TransferGoToObjMultiple2-v0 train_base_multiple_42_colobj 2818254
+        transfer_eval 3003414 000400 21 BabyAI-TransferGoToObjMultiple0-v0 train_base_multiple_100_color 2818255
+        transfer_eval 3003420 000400 24 BabyAI-TransferGoToObjMultiple1-v0 train_base_multiple_100_obj 2818255
+        transfer_eval 3003426 000400 28 BabyAI-TransferGoToObjMultiple2-v0 train_base_multiple_100_colobj 2818255
+        transfer_eval 3003419 000400 21 BabyAI-TransferGoToObjMultiple0-v0 train_new_multiple_1_color 2812454
+        transfer_eval 3003425 000400 24 BabyAI-TransferGoToObjMultiple1-v0 train_new_multiple_1_obj 2812454
+        transfer_eval 3003431 000400 28 BabyAI-TransferGoToObjMultiple2-v0 train_new_multiple_1_colobj 2812454
+        transfer_eval 3003418 000400 21 BabyAI-TransferGoToObjMultiple0-v0 train_new_multiple_42_color 2812455
+        transfer_eval 3003424 000400 24 BabyAI-TransferGoToObjMultiple1-v0 train_new_multiple_42_obj 2812455
+        transfer_eval 3003430 000400 28 BabyAI-TransferGoToObjMultiple2-v0 train_new_multiple_42_colobj 2812455
+        transfer_eval 3003417 000400 21 BabyAI-TransferGoToObjMultiple0-v0 train_new_multiple_100_color 2812456
+        transfer_eval 3003423 000400 24 BabyAI-TransferGoToObjMultiple1-v0 train_new_multiple_100_obj 2812456
+        transfer_eval 3003429 000400 28 BabyAI-TransferGoToObjMultiple2-v0 train_new_multiple_100_colobj 2812456
+    elif [ "$LEVEL" == "threes" ]; then
+        # threes level
+        echo "threes"
+        transfer_eval 3003458 000400 21 BabyAI-TransferGoToObjThrees0-v0 train_base_threes_1_color 2818257
+        transfer_eval 3003464 000400 24 BabyAI-TransferGoToObjThrees1-v0 train_base_threes_1_obj 2818257
+        transfer_eval 3003470 000400 28 BabyAI-TransferGoToObjThrees2-v0 train_base_threes_1_colobj 2818257
+        transfer_eval 3003457 000400 21 BabyAI-TransferGoToObjThrees0-v0 train_base_threes_42_color 2818258
+        transfer_eval 3003463 000400 24 BabyAI-TransferGoToObjThrees1-v0 train_base_threes_42_obj 2818258
+        transfer_eval 3003469 000400 28 BabyAI-TransferGoToObjThrees2-v0 train_base_threes_42_colobj 2818258
+        transfer_eval 3003456 000400 21 BabyAI-TransferGoToObjThrees0-v0 train_base_threes_100_color 2818260
+        transfer_eval 3003462 000400 24 BabyAI-TransferGoToObjThrees1-v0 train_base_threes_100_obj 2818260
+        transfer_eval 3003468 000400 28 BabyAI-TransferGoToObjThrees2-v0 train_base_threes_100_colobj 2818260
+        transfer_eval 3003461 000400 21 BabyAI-TransferGoToObjThrees0-v0 train_new_threes_1_color 2812451
+        transfer_eval 3003467 000400 24 BabyAI-TransferGoToObjThrees1-v0 train_new_threes_1_obj 2812451
+        transfer_eval 3003473 000400 28 BabyAI-TransferGoToObjThrees2-v0 train_new_threes_1_colobj 2812451
+        transfer_eval 3003460 000400 21 BabyAI-TransferGoToObjThrees0-v0 train_new_threes_42_color 2812453
+        transfer_eval 3003466 000400 24 BabyAI-TransferGoToObjThrees1-v0 train_new_threes_42_obj 2812453
+        transfer_eval 3003472 000400 28 BabyAI-TransferGoToObjThrees2-v0 train_new_threes_42_colobj 2812453
+        transfer_eval 3003459 000400 21 BabyAI-TransferGoToObjThrees0-v0 train_new_threes_100_color 2812452
+        transfer_eval 3003465 000400 24 BabyAI-TransferGoToObjThrees1-v0 train_new_threes_100_obj 2812452
+        transfer_eval 3003471 000400 28 BabyAI-TransferGoToObjThrees2-v0 train_new_threes_100_colobj 2812452
     fi
 fi
