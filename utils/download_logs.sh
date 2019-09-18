@@ -27,6 +27,8 @@ transfer_eval_100_beforeafter.log
 trained_transfer_eval_100_small.log
 trained_transfer_eval_100_beforeafter.log
 trained_transfer_eval_100_and.log
+trained_transfer_eval_100_multiple_no.log
+trained_transfer_eval_100_threes_no.log
 transfer_eval_100_sparse.log
 transfer_eval_100_multiple.log
 transfer_eval_100_threes.log"
